@@ -6,7 +6,6 @@ import { Styled } from "theme-ui";
 import StyledLink, { linkStyle } from "./StyledLink";
 
 const FooterLinks = ({ items }) => {
-  console.log({ items });
   return (
     <nav>
       {items &&
