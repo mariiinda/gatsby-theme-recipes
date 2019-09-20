@@ -16,7 +16,7 @@ module.exports = {
     ],
     footerLinks: [
       {
-        name: "Privacy Policy",
+        name: "Privacy Policy & Cookies",
         href: "/privacy-policy"
       }
     ]
