@@ -14,14 +14,14 @@
     "develop": "gatsby develop"
   },
   "peerDependencies": {
-    "gatsby": "^2.13.42",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "gatsby": "^2.15.19",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "gatsby": "^2.13.42",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "gatsby": "^2.15.19",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",

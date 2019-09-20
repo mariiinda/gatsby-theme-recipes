@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { Styled } from "theme-ui";
+import { graphql } from "gatsby";
 
 import RecipeCard from "../components/RecipeCard";
 
