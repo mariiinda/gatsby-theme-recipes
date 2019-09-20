@@ -11,7 +11,9 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "develop": "gatsby develop"
+    "develop": "gatsby develop",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "peerDependencies": {
     "gatsby": "^2.15.19",
@@ -19,6 +21,13 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
     "gatsby": "^2.15.19",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
@@ -29,6 +38,7 @@
     "@marinda/react-styled-buttons": "^0.1.16",
     "@mdx-js/mdx": "^1.4.5",
     "@mdx-js/react": "^1.4.5",
+    "eslint-plugin-emotion": "^10.0.14",
     "gatsby-background-image": "^0.8.11",
     "gatsby-image": "^2.2.18",
     "gatsby-plugin-emotion": "^4.1.6",

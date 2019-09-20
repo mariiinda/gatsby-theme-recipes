@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Styled } from "theme-ui";
+import { jsx } from "@emotion/core";
 import { graphql } from "gatsby";
 
 import PageLayout from "../components/PageLayout";
 import RecipeGrid from "../components/RecipeGrid";
 import useSiteMetadata from "../hooks/use-sitemetadata";
 import Tags from "../components/Tags";
+import PageIntro from "../components/PageIntro";
 
 export const query = graphql`
   query($tag: String!) {
@@ -36,16 +36,7 @@ const RecipesTemplate = ({
   const { intro } = useSiteMetadata();
   return (
     <PageLayout>
-      <Styled.p
-        css={theme =>
-          css`
-            text-align: center;
-            padding: ${theme.space[3]}px 0;
-          `
-        }
-      >
-        {intro}
-      </Styled.p>
+      <PageIntro>{intro}</PageIntro>
       <Tags tags={tags.group} />
       <RecipeGrid recipes={recipes} />
     </PageLayout>

@@ -8,6 +8,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import PageLayout from "../components/PageLayout";
 import BackLink from "../components/BackLink";
 import useSiteMetadata from "../hooks/use-sitemetadata";
+import PostIntro from "../components/PostIntro";
 
 export const query = graphql`
   query($slug: String!) {
@@ -62,19 +63,7 @@ const components = {
   th: Styled.th,
   ul: Styled.ul,
   p: Styled.p,
-  Intro: props => (
-    <Styled.p
-      {...props}
-      css={theme =>
-        css`
-          font-size: ${theme.fontSizes[3]};
-          @media (min-width: 520px) {
-            font-size: ${theme.fontSizes[4]};
-          }
-        `
-      }
-    />
-  )
+  Intro: PostIntro
 };
 
 const RecipeTemplate = ({ data: { mdx: recipe } }) => {

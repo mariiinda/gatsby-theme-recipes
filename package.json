@@ -4,10 +4,14 @@
     "develop-theme": "yarn workspace @marinda/gatsby-theme-recipes develop",
     "clean-theme": "yarn workspace @marinda/gatsby-theme-recipes clean",
     "build-theme": "yarn workspace @marinda/gatsby-theme-recipes build",
+    "lint-theme": "yarn workspace @marinda/gatsby-theme-recipes lint",
+    "format-theme": "yarn workspace @marinda/gatsby-theme-recipes format",
     "start": "yarn workspace demo develop",
     "clean-demo": "yarn workspace demo clean",
     "build-demo": "yarn workspace demo build",
     "serve-demo": "yarn workspace demo serve",
+    "lint-demo": "yarn workspace demo lint",
+    "format-demo": "yarn workspace demo format",
     "serve": "yarn workspace demo build && yarn workspace demo serve"
   },
   "workspaces": [

@@ -8,6 +8,7 @@
     "develop": "gatsby develop",
     "clean": "gatsby clean",
     "format": "prettier --write src/**/*.{js,jsx}",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
@@ -19,7 +20,14 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1"
   },
   "prettier": {}
 }

@@ -109,9 +109,9 @@ Introduction text that captures your reader's attention and entices them to read
 In any MDX file:
 
 ```mdx
-import { Intro } from '@marinda/gatsby-theme-recipes';
+import { PostIntro } from '@marinda/gatsby-theme-recipes';
 
-<Intro>These delicious choc-chip cookies are crispy on the outside and chewy on the inside.</Intro>
+<PostIntro>These delicious choc-chip cookies are crispy on the outside and chewy on the inside.</PostIntro>
 ```
 
 #### Example usage in React components
@@ -120,11 +120,11 @@ In any React component:
 
 ```jsx
 import React from 'react';
-import { Intro } from '@marinda/gatsby-theme-recipes';
+import { PostIntro } from '@marinda/gatsby-theme-recipes';
 
 export default () => (
   <div>
-    <Intro>These delicious choc-chip cookies are crispy on the outside and chewy on the inside.</Intro>
+    <PostIntro>These delicious choc-chip cookies are crispy on the outside and chewy on the inside.</PostIntro>
   </div>
 );
 ```
@@ -134,5 +134,5 @@ export default () => (
 If you want to use [component shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/) with this component, create a file at the following path in your site:
 
 ```
-src/@marinda/gatsby-theme-recipes/components/Intro.js
+src/@marinda/gatsby-theme-recipes/components/PostIntro.js
 ```

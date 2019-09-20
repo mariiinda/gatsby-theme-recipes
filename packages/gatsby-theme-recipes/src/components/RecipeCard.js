@@ -7,9 +7,8 @@ import Img from "gatsby-image";
 
 const componentStyles = ({
   colors: { background, secondary },
-  fonts: { heading },
   fontSizes: [, , , , fontSizeFive],
-  zIndices: [bottom, middle, top]
+  zIndices: [, middle]
 }) =>
   css`
     position: relative;
@@ -65,7 +64,7 @@ const componentStyles = ({
     }
   `;
 
-const RecipeCard = ({ recipe: { title, slug, image }, css, ...props }) => {
+const RecipeCard = ({ recipe: { title, slug, image }, ...props }) => {
   return (
     <Styled.a
       as={Link}
