@@ -9,6 +9,7 @@ import PageLayout from "../components/PageLayout";
 import BackLink from "../components/BackLink";
 import useSiteMetadata from "../hooks/use-sitemetadata";
 import PostIntro from "../components/PostIntro";
+import PostParagraph from "../components/PostParagraph";
 
 export const query = graphql`
   query($slug: String!) {
@@ -35,12 +36,13 @@ const recipeHeaderStyle = css`
 
 const contentStyle = css`
   float: left;
+  margin: 0 0 20px !important;
   .gatsby-resp-image-wrapper {
-    width: 60%;
+    width: 100%;
     @media (min-width: 520px) {
       float: right;
       width: 50%;
-      margin-left: 40px !important;
+      margin: 0 0 20px 40px !important;
     }
     img {
       position: absolute;
@@ -63,7 +65,8 @@ const components = {
   th: Styled.th,
   ul: Styled.ul,
   p: Styled.p,
-  Intro: PostIntro
+  PostIntro,
+  PostParagraph
 };
 
 const RecipeTemplate = ({ data: { mdx: recipe } }) => {
