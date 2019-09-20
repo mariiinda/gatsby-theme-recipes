@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "develop-theme": "yarn workspace @marinda/gatsby-theme-recipes develop",
+    "clean-theme": "yarn workspace @marinda/gatsby-theme-recipes clean",
+    "build-theme": "yarn workspace @marinda/gatsby-theme-recipes build",
+    "start": "yarn workspace demo develop",
+    "clean-demo": "yarn workspace demo clean",
+    "build-demo": "yarn workspace demo build",
+    "serve-demo": "yarn workspace demo serve",
+    "serve": "yarn workspace demo build && yarn workspace demo serve"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
