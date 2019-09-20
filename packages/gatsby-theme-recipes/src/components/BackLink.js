@@ -3,13 +3,11 @@ import { jsx } from "@emotion/core";
 
 import StyledLink from "../components/StyledLink";
 
-const BackLink = () => {
+const BackLink = ({ path = "/", children }) => {
   return (
-    <div>
-      <StyledLink to={"/"} size="small">
-        <span aria-hidden>{"<"} </span> <span>Back to recipes </span>
-      </StyledLink>
-    </div>
+    <StyledLink to={path} size="small">
+      <span aria-hidden>{"<"} </span> <span>{children}</span>
+    </StyledLink>
   );
 };
 

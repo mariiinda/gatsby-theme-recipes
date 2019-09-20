@@ -12,6 +12,7 @@ module.exports = ({
       title,
       description: "Delicious recipes you’ll want to keep making.",
       intro: "Delicious recipes you’ll want to keep making.",
+      basePath,
       menuLinks: [
         {
           name: "About",

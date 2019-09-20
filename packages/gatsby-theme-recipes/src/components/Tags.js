@@ -34,7 +34,7 @@ const buttonCSS = theme => css`
   }
 `;
 
-const Tags = ({ tags = [] }) => {
+const Tags = ({ basePath = "/", tags = [] }) => {
   return (
     <nav css={componentCSS}>
       {
@@ -42,7 +42,7 @@ const Tags = ({ tags = [] }) => {
           key="all"
           css={theme => buttonCSS(theme)}
           as={Link}
-          to="/"
+          to={basePath}
           size="small"
           activeClassName="active"
         >

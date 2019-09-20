@@ -7,6 +7,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import PageLayout from "../components/PageLayout";
 import BackLink from "../components/BackLink";
+import useSiteMetadata from "../hooks/use-sitemetadata";
 
 export const query = graphql`
   query($slug: String!) {
@@ -76,21 +77,24 @@ const components = {
   )
 };
 
-const RecipeTemplate = ({ data: { mdx: recipe } }) => (
-  <MDXProvider components={components}>
-    <PageLayout>
-      <div css={componentStyle}>
-        <div css={recipeHeaderStyle}>
-          <BackLink />
-          <Styled.h1>{recipe.frontmatter.title}</Styled.h1>
-          <p>{recipe.frontmatter.date}</p>
+const RecipeTemplate = ({ data: { mdx: recipe } }) => {
+  const { basePath } = useSiteMetadata();
+  return (
+    <MDXProvider components={components}>
+      <PageLayout>
+        <div css={componentStyle}>
+          <div css={recipeHeaderStyle}>
+            <BackLink path={basePath}>Back to recipes</BackLink>
+            <Styled.h1>{recipe.frontmatter.title}</Styled.h1>
+            <p>{recipe.frontmatter.date}</p>
+          </div>
+          <div css={contentStyle}>
+            <MDXRenderer>{recipe.body}</MDXRenderer>
+          </div>
         </div>
-        <div css={contentStyle}>
-          <MDXRenderer>{recipe.body}</MDXRenderer>
-        </div>
-      </div>
-    </PageLayout>
-  </MDXProvider>
-);
+      </PageLayout>
+    </MDXProvider>
+  );
+};
 
 export default RecipeTemplate;

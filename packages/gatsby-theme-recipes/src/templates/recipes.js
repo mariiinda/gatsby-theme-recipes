@@ -10,7 +10,7 @@ import Tags from "../components/Tags";
 
 const RecipesTemplate = () => {
   const { recipes, tags } = useRecipes();
-  const { intro } = useSiteMetadata();
+  const { intro, basePath } = useSiteMetadata();
   return (
     <PageLayout>
       <Styled.p
@@ -23,7 +23,7 @@ const RecipesTemplate = () => {
       >
         {intro}
       </Styled.p>
-      <Tags tags={tags} />
+      <Tags basePath={basePath} tags={tags} />
       <RecipeGrid recipes={recipes} />
     </PageLayout>
   );

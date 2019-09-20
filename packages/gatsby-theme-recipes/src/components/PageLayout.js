@@ -20,7 +20,8 @@ const PageLayout = ({ children }) => {
     title = "",
     description = "",
     menuLinks = [],
-    footerLinks = []
+    footerLinks = [],
+    basePath
   } = useSiteMetadata();
 
   return (
@@ -35,7 +36,6 @@ const PageLayout = ({ children }) => {
           }
         }}
       />
-
       <StyledLayout>
         <Helmet>
           <html lang="en" />
@@ -46,7 +46,7 @@ const PageLayout = ({ children }) => {
           <Header>
             <MenuLinks items={menuLinks} />
             <Styled.h1>
-              <Styled.a as={Link} to="/">
+              <Styled.a as={Link} to={basePath}>
                 {title}
               </Styled.a>
             </Styled.h1>

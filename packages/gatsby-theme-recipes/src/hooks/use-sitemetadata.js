@@ -8,6 +8,7 @@ const useSiteMetadata = () => {
           title
           description
           intro
+          basePath
           menuLinks {
             name
             slug
