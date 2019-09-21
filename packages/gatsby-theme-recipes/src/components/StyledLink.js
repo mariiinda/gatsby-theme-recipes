@@ -38,10 +38,10 @@ export const linkStyle = ({ theme, size }) => css`
 const StyledLink = ({ to = "", children, size = "default", ...props }) => {
   return (
     <Link
-      {...props}
       to={to}
       activeClassName="active"
       css={theme => linkStyle({ theme, size })}
+      {...props}
     >
       {children}
     </Link>

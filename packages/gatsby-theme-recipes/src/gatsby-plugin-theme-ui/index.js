@@ -75,6 +75,10 @@ export default {
         color: "secondary"
       }
     },
+    img: {
+      width: "100%",
+      height: "auto"
+    },
     Layout: {
       pt: 2,
       border: `30px solid`,
@@ -152,7 +156,8 @@ export default {
         borderLeft: "none",
         borderRight: "none",
         borderColor: "muted",
-        width: "40%",
+        width: "100%",
+        breakInside: "avoid",
         py: 4,
         px: 4,
         th: {

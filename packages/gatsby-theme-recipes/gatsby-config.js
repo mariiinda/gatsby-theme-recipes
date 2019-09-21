@@ -27,8 +27,28 @@ module.exports = ({
       ]
     },
     plugins: [
+      "gatsby-transformer-sharp",
+      "gatsby-plugin-sharp",
       {
-        resolve: "gatsby-plugin-page-creator",
+        resolve: "gatsby-plugin-mdx",
+        options: {
+          defaultLayouts: {
+            default: require.resolve("./src/components/MarkdownLayout.js")
+          },
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 650,
+                linkImagesToOriginal: false,
+                withWebp: true
+              }
+            }
+          ]
+        }
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
         options: {
           path: `${__dirname}/src/pages`
         }
@@ -59,26 +79,7 @@ module.exports = ({
       },
       "gatsby-plugin-react-helmet",
       "gatsby-plugin-emotion",
-      "gatsby-transformer-sharp",
-      "gatsby-plugin-sharp",
-      {
-        resolve: "gatsby-plugin-mdx",
-        options: {
-          defaultLayouts: {
-            default: require.resolve("./src/components/PageLayout.js")
-          },
-          gatsbyRemarkPlugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 650,
-                linkImagesToOriginal: false,
-                withWebp: true
-              }
-            }
-          ]
-        }
-      },
+
       {
         resolve: "gatsby-source-filesystem",
         options: {
