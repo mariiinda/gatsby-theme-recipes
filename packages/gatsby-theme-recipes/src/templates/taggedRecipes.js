@@ -9,10 +9,12 @@ import Tags from "../components/Tags";
 import PageIntro from "../components/PageIntro";
 
 export const query = graphql`
-  query($tag: String!) {
+  query($tag: String!, $skip: Int!, $limit: Int!) {
     allMdx(
       sort: { order: DESC, fields: frontmatter___date }
       filter: { frontmatter: { tags: { eq: $tag } } }
+      limit: $limit
+      skip: $skip
     ) {
       nodes {
         ...IndexRecipeFragment
