@@ -1215,19 +1215,12 @@
   dependencies:
     core-js "^2.5.7"
 
-"@marinda/react-styled-buttons@^0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@marinda/react-styled-buttons/-/react-styled-buttons-0.1.20.tgz#dafbb7858976d268d58bc3602b7032490b604618"
-  integrity sha512-+00S5OZRQtM1o+2NRLS52eQ69CVwPKiW9DgwwmvmTn820Lz1LI9WLhGZfOG0awxQIKoW+60z6RI6H921R8UoYQ==
+"@marinda/react-styled-buttons@^0.1.21":
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/@marinda/react-styled-buttons/-/react-styled-buttons-0.1.21.tgz#662ba18dfd76d04491a5a64448c9dfd9f9472892"
+  integrity sha512-SHFcTBHjWM7P/mwTYTGlFXheeBNHtdW7TwfM3EH8GzOOv7/9mEgV6MkHVaZk8KpVqinnlkmKGeLndMc9x6Hx9A==
   dependencies:
-    "@marinda/tetris-theme-ui-preset" "^2.0.14"
     chroma-js "^2.0.4"
-    lodash.merge "^4.6.2"
-
-"@marinda/tetris-theme-ui-preset@^2.0.14":
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/@marinda/tetris-theme-ui-preset/-/tetris-theme-ui-preset-2.0.14.tgz#be6e57903d373cd7e25590c7cf5d261ff2ca915b"
-  integrity sha512-3Aifq2UPW0xaSl1kS8ZmEuipNKNnFrfAr++U0dXHTbYm3bvCyX6lw4I6O7Y08h7BM0G7Ef812A1s5B2iVX6G5w==
 
 "@mdx-js/mdx@^1.4.5":
   version "1.5.0"
@@ -7943,7 +7936,7 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
-lodash.merge@^4.4.0, lodash.merge@^4.6.2:
+lodash.merge@^4.4.0:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==

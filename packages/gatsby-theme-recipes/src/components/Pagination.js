@@ -44,8 +44,6 @@ const linkCSS = theme => css`
 const buttonCSS = theme => css`
   text-decoration: none;
   margin: 0 ${theme.space[3]}px;
-  color: ${theme.colors.background};
-  background: ${theme.colors.secondary};
 `;
 
 const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
@@ -68,6 +66,8 @@ const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
               rel="prev"
               size="small"
               css={theme => buttonCSS(theme)}
+              theme={globalTheme}
+              variant="secondary"
             >
               ← Previous Page
             </Button>
@@ -91,6 +91,8 @@ const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
               rel="next"
               size="small"
               css={theme => buttonCSS(theme)}
+              theme={globalTheme}
+              variant="secondary"
             >
               Next Page →
             </Button>
