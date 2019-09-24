@@ -52,9 +52,9 @@ const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString();
-  const prevPagePath = `${basePath}/${prevPage}`;
+  const prevPagePath = `${basePath}${prevPage}`;
   const nextPage = (currentPage + 1).toString();
-  const nextPagePath = `${basePath}/${nextPage}`;
+  const nextPagePath = `${basePath}${nextPage}`;
   const isOnePage = isFirst && isLast;
 
   return (
@@ -78,7 +78,7 @@ const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
                 css={theme => linkCSS(theme)}
                 key={`pagination-number${i + 1}`}
               >
-                <StyledLink to={`${basePath}/${i === 0 ? "" : i + 1}`}>
+                <StyledLink to={`${basePath}${i === 0 ? "" : i + 1}`}>
                   {i + 1}
                 </StyledLink>
               </li>

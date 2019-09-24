@@ -47,7 +47,7 @@ const RecipesTemplate = ({
       <Pagination
         currentPage={currentPage}
         numPages={numPages}
-        basePath={`${basePath}tags/${tag}`}
+        basePath={`${basePath}tags/${tag}/`}
       />
     </PageLayout>
   );
