@@ -7,6 +7,7 @@ import RecipeGrid from "../components/RecipeGrid";
 import useSiteMetadata from "../hooks/use-sitemetadata";
 import Tags from "../components/Tags";
 import PageIntro from "../components/PageIntro";
+import Pagination from "../components/Pagination";
 
 export const query = graphql`
   query($tag: String!, $skip: Int!, $limit: Int!) {
@@ -33,7 +34,8 @@ const RecipesTemplate = ({
   data: {
     allMdx: { nodes: recipes = [] },
     tags
-  }
+  },
+  pageContext: { currentPage, numPages }
 }) => {
   const { intro } = useSiteMetadata();
   return (
@@ -41,6 +43,7 @@ const RecipesTemplate = ({
       <PageIntro>{intro}</PageIntro>
       <Tags tags={tags.group} />
       <RecipeGrid recipes={recipes} />
+      <Pagination currentPage={currentPage} numPages={numPages} />
     </PageLayout>
   );
 };

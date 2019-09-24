@@ -4,10 +4,10 @@ import { graphql } from "gatsby";
 
 import PageLayout from "../components/PageLayout";
 import RecipeGrid from "../components/RecipeGrid";
-//import useRecipes from "../hooks/use-recipes";
 import useSiteMetadata from "../hooks/use-sitemetadata";
 import Tags from "../components/Tags";
 import PageIntro from "../components/PageIntro";
+import Pagination from "../components/Pagination";
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
@@ -33,14 +33,17 @@ const RecipesTemplate = ({
   data: {
     allMdx: { nodes: recipes = [] },
     tags
-  }
+  },
+  pageContext: { currentPage, numPages }
 }) => {
   const { intro } = useSiteMetadata();
+
   return (
     <PageLayout>
       <PageIntro>{intro}</PageIntro>
       <Tags tags={tags.group} />
       <RecipeGrid recipes={recipes} />
+      <Pagination currentPage={currentPage} numPages={numPages} />
     </PageLayout>
   );
 };
