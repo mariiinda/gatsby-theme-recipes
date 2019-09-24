@@ -20,17 +20,17 @@ const buttonCSS = theme => css`
 
   &:hover {
     color: ${theme.colors.background};
-    background: ${theme.colors.secondary};
+    background: ${theme.colors.primary};
   }
 
   &.active {
     color: ${theme.colors.background};
-    background: ${theme.colors.secondary};
+    background: ${theme.colors.primary};
   }
 
   &:focus {
-    box-shadow: 0 0px 8px ${theme.colors.secondary},
-      0 0px 8px ${theme.colors.secondary};
+    box-shadow: 0 0px 8px ${theme.colors.primary},
+      0 0px 8px ${theme.colors.primary};
   }
 `;
 
@@ -57,6 +57,7 @@ const Tags = ({ basePath = "/", tags = [] }) => {
             as={Link}
             to={`/tags/${tag}`}
             size="small"
+            partiallyActive={true}
             activeClassName="active"
           >
             {tag}

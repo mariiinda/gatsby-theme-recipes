@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 
 // Make sure the recipes directory exists
 exports.onPreBootstrap = ({ reporter }, { contentPath = "recipes" }) => {
@@ -9,14 +10,9 @@ exports.onPreBootstrap = ({ reporter }, { contentPath = "recipes" }) => {
 };
 
 exports.createPages = async (
-  { actions, graphql, reporter },
+  { actions: { createPage }, graphql, reporter },
   { basePath = "/" }
 ) => {
-  actions.createPage({
-    path: basePath,
-    component: require.resolve("./src/templates/recipes.js")
-  });
-
   // recipe pages
   const result = await graphql(`
     query {
@@ -36,8 +32,23 @@ exports.createPages = async (
 
   const recipes = result.data.allMdx.nodes;
 
+  const recipesPerPage = 6;
+  const numPages = Math.ceil(recipes.length / recipesPerPage);
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? basePath : `${basePath}${i + 1}`,
+      component: require.resolve("./src/templates/recipes.js"),
+      context: {
+        limit: recipesPerPage,
+        skip: i * recipesPerPage,
+        numPages,
+        currentPage: i + 1
+      }
+    });
+  });
+
   recipes.forEach(recipe => {
-    actions.createPage({
+    createPage({
       path: recipe.frontmatter.slug,
       component: require.resolve("./src/templates/recipe.js"),
       context: {
@@ -52,6 +63,7 @@ exports.createPages = async (
       allMdx {
         group(field: frontmatter___tags) {
           tag: fieldValue
+          totalCount
         }
       }
     }
@@ -64,12 +76,22 @@ exports.createPages = async (
   const tags = tagsResult.data.allMdx.group;
 
   tags.forEach(tag => {
-    actions.createPage({
-      path: `${basePath}tags/${tag.tag}`,
-      component: require.resolve("./src/templates/taggedRecipes.js"),
-      context: {
-        tag: tag.tag
-      }
+    const numPages = Math.ceil(tag.totalCount / recipesPerPage);
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path:
+          i === 0
+            ? `${basePath}tags/${tag.tag}`
+            : `${basePath}tags/${tag.tag}/${i + 1}`,
+        component: require.resolve("./src/templates/taggedRecipes.js"),
+        context: {
+          tag: tag.tag,
+          limit: recipesPerPage,
+          skip: i * recipesPerPage,
+          numPages,
+          currentPage: i + 1
+        }
+      });
     });
   });
 };

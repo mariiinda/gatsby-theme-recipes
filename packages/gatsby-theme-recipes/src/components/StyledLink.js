@@ -11,10 +11,10 @@ export const linkStyle = ({ theme, size }) => css`
   align-items: center;
   transition: color 0.25s ease-in-out;
   &:hover {
-    color: ${theme.colors.secondary};
+    color: ${theme.colors.primary};
   }
   &.active {
-    color: ${theme.colors.secondary};
+    color: ${theme.colors.primary};
   }
   &::before {
     content: "";
