@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 const componentStyles = ({
-  colors: { background, secondary },
+  colors: { background, primary },
   fontSizes: [, , , , fontSizeFive],
   zIndices: [, middle]
 }) =>
@@ -46,7 +46,7 @@ const componentStyles = ({
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: ${secondary};
+      background-color: ${primary};
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }

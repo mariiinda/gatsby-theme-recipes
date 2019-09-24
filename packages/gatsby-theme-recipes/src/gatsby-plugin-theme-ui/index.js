@@ -8,8 +8,8 @@ export default {
   colors: {
     text: "#120126",
     background: "#fff",
-    primary: "#2c4c9f",
-    secondary: "#f04530",
+    primary: "#f04530",
+    secondary: "#2c4c9f",
     accent: "#017c9e",
     muted: "#FBF1E0"
   },
@@ -72,7 +72,7 @@ export default {
       textDecoration: "none",
       transition: "color .3s ease-in-out",
       ":hover": {
-        color: "secondary"
+        color: "primary"
       }
     },
     img: {

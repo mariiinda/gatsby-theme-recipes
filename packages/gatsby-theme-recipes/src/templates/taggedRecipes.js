@@ -35,15 +35,20 @@ const RecipesTemplate = ({
     allMdx: { nodes: recipes = [] },
     tags
   },
-  pageContext: { currentPage, numPages }
+  pageContext: { currentPage, numPages, tag }
 }) => {
-  const { intro } = useSiteMetadata();
+  const { intro, basePath } = useSiteMetadata();
+  console.log({ basePath, tag });
   return (
     <PageLayout>
       <PageIntro>{intro}</PageIntro>
       <Tags tags={tags.group} />
       <RecipeGrid recipes={recipes} />
-      <Pagination currentPage={currentPage} numPages={numPages} />
+      <Pagination
+        currentPage={currentPage}
+        numPages={numPages}
+        basePath={`${basePath}tags/${tag}`}
+      />
     </PageLayout>
   );
 };
