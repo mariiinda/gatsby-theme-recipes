@@ -55,13 +55,6 @@ module.exports = ({
       },
       "gatsby-plugin-theme-ui",
       {
-        resolve: `gatsby-plugin-google-fonts`,
-        options: {
-          fonts: [`Cardo`, `Raleway\:400,400i,700`],
-          display: "swap"
-        }
-      },
-      {
         resolve: `gatsby-plugin-manifest`,
         options: {
           name: title,
