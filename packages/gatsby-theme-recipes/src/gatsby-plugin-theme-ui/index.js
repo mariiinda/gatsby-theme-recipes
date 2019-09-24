@@ -9,7 +9,7 @@ export default {
     text: "#120126",
     background: "#fff",
     primary: "#f04530",
-    secondary: "#663399",
+    secondary: "#862E9C",
     accent: "#017c9e",
     muted: "#FBF1E0"
   },
