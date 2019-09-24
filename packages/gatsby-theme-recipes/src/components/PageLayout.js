@@ -33,6 +33,13 @@ const PageLayout = ({ children }) => {
           },
           "*": {
             boxSizing: "border-box"
+          },
+          "@font-face": {
+            fontFamily: "Cardo",
+            src: 'url("/fonts/cardo-regular.woff2")',
+            fontDisplay: "swap",
+            fontWeight: 400,
+            fontStyle: "normal"
           }
         }}
       />
