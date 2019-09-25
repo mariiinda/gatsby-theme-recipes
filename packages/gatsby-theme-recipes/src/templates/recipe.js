@@ -6,6 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import MarkdownLayout from "../components/MarkdownLayout";
 import CoverImage from "../components/CoverImage";
+import PageTransition from "../components/PageTransition";
 
 export const query = graphql`
   query($slug: String!) {
@@ -45,14 +46,17 @@ const RecipeTemplate = ({
 }) => {
   return (
     <MarkdownLayout>
-      <article css={componentStyle}>
-        <div css={contentContainerStyle}>
-          <CoverImage image={image} alt={title} />
-          <Styled.h1>{title}</Styled.h1>
-          <p>{date}</p>
-          <MDXRenderer>{body}</MDXRenderer>
-        </div>
-      </article>
+      <PageTransition>
+        <article css={componentStyle}>
+          <div css={contentContainerStyle}>
+            <CoverImage image={image} alt={title} />
+            <Styled.h1>{title}</Styled.h1>
+            <p>{date}</p>
+
+            <MDXRenderer>{body}</MDXRenderer>
+          </div>
+        </article>
+      </PageTransition>
     </MarkdownLayout>
   );
 };
