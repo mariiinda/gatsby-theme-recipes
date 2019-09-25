@@ -37,13 +37,9 @@ const MarkdownLayout = ({ children }) => {
                 display: inline-block;
               }
             }
-            p {
-              max-width: 680px;
-            }
             .gatsby-resp-image-wrapper {
               clear: both;
               width: 100%;
-              margin: 40px 0 !important;
               img {
                 position: absolute;
                 top: 0;

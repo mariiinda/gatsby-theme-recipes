@@ -180,6 +180,7 @@ export default {
         }
       },
       p: {
+        maxWidth: "md",
         mb: 3
       }
     },
