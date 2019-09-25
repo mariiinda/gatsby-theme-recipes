@@ -8,7 +8,7 @@
     "format-theme": "yarn workspace @marinda/gatsby-theme-recipes format",
     "start": "yarn workspace demo develop",
     "clean-demo": "yarn workspace demo clean",
-    "build-demo": "yarn workspace demo build",
+    "build": "yarn workspace demo build",
     "serve-demo": "yarn workspace demo serve",
     "lint-demo": "yarn workspace demo lint",
     "format-demo": "yarn workspace demo format",
