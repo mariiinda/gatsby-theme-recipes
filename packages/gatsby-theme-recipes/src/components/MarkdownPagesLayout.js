@@ -4,8 +4,9 @@ import { css, jsx } from "@emotion/core";
 import { Styled } from "theme-ui";
 import { MDXProvider } from "@mdx-js/react";
 
-import PageLayout from "../components/PageLayout";
-import BackLink from "../components/BackLink";
+import PageLayout from "./PageLayout";
+import BackLink from "./BackLink";
+import PageImage from "./PageImage";
 
 import StyledParagraph from "./StyledParagraph";
 import useSiteMetadata from "../hooks/use-sitemetadata";
@@ -21,19 +22,11 @@ const components = {
   th: Styled.th,
   ul: Styled.ul,
   p: Styled.p,
-  StyledParagraph
+  StyledParagraph,
+  Image: PageImage
 };
 
-const componentCSS = ({ space = [], sizes = {} }) => css`
-  > p:first-of-type {
-    max-width: none;
-    img {
-      float: right;
-      width: calc(50% - ${space[5]}px);
-      margin-left: ${space[5]}px;
-      margin-bottom: ${space[4]}px;
-    }
-  }
+const componentCSS = ({ sizes = {} }) => css`
   > * {
     max-width: ${sizes.md}px;
   }

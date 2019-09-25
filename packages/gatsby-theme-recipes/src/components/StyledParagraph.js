@@ -6,7 +6,6 @@ const StyledParagraph = props => (
   <Styled.p
     css={theme =>
       css`
-        ${"" /* max-width: 680px; */}
         width: 100%;
         max-width: none !important;
         font-size: ${theme.fontSizes[3]};
