@@ -8,6 +8,7 @@ import BackLink from "./BackLink";
 import PageImage from "./PageImage";
 import StyledParagraph from "./StyledParagraph";
 import useSiteMetadata from "../hooks/use-sitemetadata";
+import PageTransition from "../components/PageTransition";
 
 const components = {
   h1: Styled.h1,
@@ -55,8 +56,10 @@ const MarkdownPagesLayout = ({ children }) => {
   return (
     <MDXProvider components={components}>
       <PageLayout>
-        <BackLink path={basePath}>Back to recipes</BackLink>
-        <div css={theme => componentCSS(theme)}>{children}</div>
+        <PageTransition>
+          <BackLink path={basePath}>Back to recipes</BackLink>
+          <div css={theme => componentCSS(theme)}>{children}</div>
+        </PageTransition>
       </PageLayout>
     </MDXProvider>
   );
