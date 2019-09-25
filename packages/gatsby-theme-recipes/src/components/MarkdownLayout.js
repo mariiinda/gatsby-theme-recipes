@@ -1,12 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-
 import { Styled } from "theme-ui";
 import { MDXProvider } from "@mdx-js/react";
 
 import PageLayout from "../components/PageLayout";
 import BackLink from "../components/BackLink";
-
 import StyledParagraph from "./StyledParagraph";
 import useSiteMetadata from "../hooks/use-sitemetadata";
 
