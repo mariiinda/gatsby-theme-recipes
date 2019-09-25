@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     description: "Classic recipes you’ll want to keep making.",
-    url: "",
+    url: "https://recipes-demo.marinda.me",
     author: "",
     intro: "Classic recipes you’ll want to keep making.",
     menuLinks: [
