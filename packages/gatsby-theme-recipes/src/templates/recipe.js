@@ -27,7 +27,9 @@ export const query = graphql`
 `;
 
 const componentStyle = css`
+  outline: 1px solid red;
   position: relative;
+
   ${"" /* display: flex;
   flex: 1;
   overflow: hidden;
@@ -35,10 +37,19 @@ const componentStyle = css`
 `;
 
 const headerStyle = css`
+  outline: 1px solid green;
+  display: flex;
+  ${"" /* float: left; */}
+`;
+
+const headerWrapperStyle = css`
+  outline: 1px solid orange;
+  width: 50%;
   ${"" /* float: left; */}
 `;
 
 const contentContainerStyle = css`
+  outline: 1px solid purple;
   float: left;
   margin: 0 0 20px !important;
 `;
@@ -55,8 +66,10 @@ const RecipeTemplate = ({
     <MarkdownLayout>
       <article css={componentStyle}>
         <header css={headerStyle}>
-          <Styled.h1>{title}</Styled.h1>
-          <p>{date}</p>
+          <div css={headerWrapperStyle}>
+            <Styled.h1>{title}</Styled.h1>
+            <p>{date}</p>
+          </div>
           <CoverImage image={image} />
         </header>
         <div css={contentContainerStyle}>

@@ -32,10 +32,10 @@ const MarkdownLayout = ({ children }) => {
         <BackLink path={basePath}>Back to recipes</BackLink>
         <div
           css={css`
-            columns: 2 auto;
+            /*             columns: 2 auto;
             column-width: 450px;
             column-gap: 40px;
-            column-fill: balance;
+            column-fill: balance; */
             ul {
               p {
                 display: inline-block;
