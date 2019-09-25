@@ -5,6 +5,11 @@ A Gatsby theme for recipe enthusiasts.
 ## [Demo](https://recipes-demo.marinda.me/)
 
 ---
+## Using Theme
+
+### [Theme Readme](./packages/gatsby-theme-recipes/README.md)
+
+---
 ## Yarn workspace tasks:
 This repo makes use of [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) to link packages together whilst developing. This means you can run the demo dev tasks whilst developing the theme package and see latest theme changes on the demo site.
 
@@ -23,9 +28,6 @@ This repo makes use of [yarn workspaces](https://yarnpkg.com/lang/en/docs/worksp
 ### Clean
 `yarn clean-demo`
 
----
-## Using Theme
 
-### [Theme Readme](./packages/gatsby-theme-recipes/README.md)
 
 
