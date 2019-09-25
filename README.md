@@ -10,7 +10,7 @@ A Gatsby theme for recipe enthusiasts.
 ### [Theme Readme](./packages/gatsby-theme-recipes/README.md)
 
 ---
-## Yarn workspace tasks:
+## Developing:
 This repo makes use of [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) to link packages together whilst developing. This means you can run the demo dev tasks whilst developing the theme package and see latest theme changes on the demo site.
 
 ### Install dependencies
