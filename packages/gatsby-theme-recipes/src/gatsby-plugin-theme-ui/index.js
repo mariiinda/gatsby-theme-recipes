@@ -177,7 +177,8 @@ export default {
     },
     Main: {
       display: "flex",
-      flexDirection: "column"
+      flexDirection: "column",
+      justifyContent: "space-evenly"
     },
     Footer: {
       position: "relative",
