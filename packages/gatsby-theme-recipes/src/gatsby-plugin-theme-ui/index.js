@@ -6,12 +6,12 @@
 
 export default {
   colors: {
-    text: "#120126",
+    text: "#362101",
     background: "#fff",
     primary: "#f04530",
     secondary: "#862E9C",
     accent: "#017c9e",
-    muted: "#FBF1E0"
+    muted: "#F9E7C9"
   },
   fonts: {
     body: "'Raleway', Arial, Helvetica, sans-serif",
