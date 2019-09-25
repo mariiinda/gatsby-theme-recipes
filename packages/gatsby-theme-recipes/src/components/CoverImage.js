@@ -6,18 +6,23 @@ import Img from "gatsby-image";
 
 const componentStyles = theme =>
   css`
+    float: right;
     position: relative;
     width: 50%;
-    display: flex;
+    clip-path: circle(50%);
+    shape-outside: circle(52%);
+    ${"" /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */}
     .gatsby-image-wrapper {
-      clip-path: circle(50%);
-      shape-outside: circle(50%);
       width: 100%;
       height: 100%;
-      max-height: 510px;
-      max-width: 510px;
+
+      > div {
+        padding-bottom: 100% !important;
+      }
+      ${"" /* max-height: 510px;
+      max-width: 510px; */}
       ${"" /*    @media (min-width: 520px) {
         float: right;
         width: 50%;

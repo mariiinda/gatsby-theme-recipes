@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
+import { Fragment } from "react";
 import { graphql } from "gatsby";
 import { Styled } from "theme-ui";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -27,7 +28,7 @@ export const query = graphql`
 `;
 
 const componentStyle = css`
-  outline: 1px solid red;
+  ${"" /*   outline: 1px solid red; */}
   position: relative;
 
   ${"" /* display: flex;
@@ -37,19 +38,19 @@ const componentStyle = css`
 `;
 
 const headerStyle = css`
-  outline: 1px solid green;
+  ${"" /*   outline: 1px solid green; */}
   display: flex;
   ${"" /* float: left; */}
 `;
 
 const headerWrapperStyle = css`
-  outline: 1px solid orange;
+  ${"" /* outline: 1px solid orange; */}
   width: 50%;
   ${"" /* float: left; */}
 `;
 
 const contentContainerStyle = css`
-  outline: 1px solid purple;
+  ${"" /*   outline: 1px solid purple; */}
   float: left;
   margin: 0 0 20px !important;
 `;
@@ -65,14 +66,13 @@ const RecipeTemplate = ({
   return (
     <MarkdownLayout>
       <article css={componentStyle}>
-        <header css={headerStyle}>
-          <div css={headerWrapperStyle}>
-            <Styled.h1>{title}</Styled.h1>
-            <p>{date}</p>
-          </div>
-          <CoverImage image={image} />
-        </header>
+        {/*  <header css={headerStyle}>
+          <div css={headerWrapperStyle}></div>
+        </header> */}
         <div css={contentContainerStyle}>
+          <CoverImage image={image} />
+          <Styled.h1>{title}</Styled.h1>
+          <p>{date}</p>
           <MDXRenderer>{body}</MDXRenderer>
         </div>
       </article>
