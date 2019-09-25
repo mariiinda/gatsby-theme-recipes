@@ -5,7 +5,7 @@ const fs = require("fs-extra");
 console.log("optimizing demo site images");
 
 const matches = glob.sync("**/images/**/*.{png,jpg,jpeg}");
-const MAX_WIDTH = 2280;
+const MAX_WIDTH = 1800;
 const QUALITY = 70;
 
 Promise.all(

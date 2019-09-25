@@ -4,8 +4,8 @@ const fs = require("fs-extra");
 
 console.log("optimizing");
 
-const matches = glob.sync("**/images/**/*.{png,jpg,jpeg}");
-const MAX_WIDTH = 2280;
+const matches = glob.sync("src/images/**/*.{png,jpg,jpeg}");
+const MAX_WIDTH = 1800;
 const QUALITY = 70;
 
 Promise.all(
