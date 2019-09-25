@@ -24,45 +24,48 @@ const components = {
   StyledParagraph
 };
 
+const componentCSS = ({ space = [], sizes = {} }) => css`
+  > p:first-of-type {
+    max-width: none;
+    img {
+      float: right;
+      width: calc(50% - ${space[5]}px);
+      margin-left: ${space[5]}px;
+      margin-bottom: ${space[4]}px;
+    }
+  }
+  > * {
+    max-width: ${sizes.md}px;
+  }
+  img {
+    float: left;
+    width: 100%;
+  }
+  ul {
+    p {
+      display: inline-block;
+    }
+  }
+  .gatsby-resp-image-wrapper {
+    width: 100%;
+    break-inside: avoid;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+`;
+
 const MarkdownPagesLayout = ({ children }) => {
   const { basePath } = useSiteMetadata();
   return (
     <MDXProvider components={components}>
       <PageLayout>
         <BackLink path={basePath}>Back to recipes</BackLink>
-        <div
-          css={css`
-            /* columns: 2 auto;
-            column-width: 450px;
-            column-gap: 40px;
-            column-fill: balance; */
-            ul {
-              p {
-                display: inline-block;
-              }
-            }
-            p {
-              max-width: 680px;
-            }
-            img {
-              float: right;
-              max-width: 680px;
-            }
-            .gatsby-resp-image-wrapper {
-              width: 100%;
-              break-inside: avoid;
-              img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-              }
-            }
-          `}
-        >
-          {children}
-        </div>
+        <div css={theme => componentCSS(theme)}>{children}</div>
       </PageLayout>
     </MDXProvider>
   );

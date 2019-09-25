@@ -114,7 +114,11 @@ export default {
       maxWidth: "xl",
       display: "flex",
       flexDirection: "column",
-      flex: 1,
+      flex: 1
+    },
+    Main: {
+      display: "flex",
+      flexDirection: "column",
       h1: {
         margin: 0,
         mt: 4,
@@ -149,7 +153,8 @@ export default {
         textTransform: "capitalize"
       },
       ul: {
-        maxWidth: "650px"
+        maxWidth: "md",
+        mb: 3
       },
       table: {
         border: "1px solid transparent",
@@ -158,7 +163,6 @@ export default {
         borderColor: "muted",
         width: "auto",
         minWidth: "48%",
-        breakInside: "avoid",
         py: 4,
         px: 4,
         th: {
@@ -174,12 +178,10 @@ export default {
           textAlign: "left",
           px: 2
         }
+      },
+      p: {
+        mb: 3
       }
-    },
-    Main: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-evenly"
     },
     Footer: {
       position: "relative",

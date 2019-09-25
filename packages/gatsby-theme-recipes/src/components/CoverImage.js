@@ -31,10 +31,10 @@ const componentStyles = theme =>
     }
   `;
 
-const CoverImage = ({ image, ...props }) => {
+const CoverImage = ({ image, alt = "", ...props }) => {
   return (
     <div css={theme => componentStyles(theme)} {...props}>
-      <Img fluid={image.sharp.fluid} alt="" />
+      <Img fluid={image.sharp.fluid} alt={alt} />
     </div>
   );
 };

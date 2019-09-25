@@ -7,6 +7,7 @@ const StyledParagraph = props => (
     css={theme =>
       css`
         ${"" /* max-width: 680px; */}
+        width: 100%;
         max-width: none !important;
         font-size: ${theme.fontSizes[3]};
         margin-bottom: ${theme.space[4]}px;
