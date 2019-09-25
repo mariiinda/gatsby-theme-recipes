@@ -2,7 +2,7 @@
 
 A Gatsby theme for recipe enthusiasts.
 
-## [Demo](TODO)
+## [Demo](http://recipes-demo.marinda.me/)
 
 ---
 ## Yarn workspace tasks:
@@ -26,5 +26,6 @@ This repo makes use of [yarn workspaces](https://yarnpkg.com/lang/en/docs/worksp
 ---
 ## Using Theme
 
-### [Theme Readme](TODO)
+### [Theme Readme](./packages/gatsby-theme-recipes/README.md)
+
 
