@@ -60,7 +60,7 @@ module.exports = ({
         resolve: "gatsby-plugin-mdx",
         options: {
           defaultLayouts: {
-            default: require.resolve("./src/components/PagesLayout.js"),
+            default: require.resolve("./src/components/MarkdownPagesLayout.js"),
             pages: require.resolve("./src/components/MarkdownLayout.js")
           },
           gatsbyRemarkPlugins: [

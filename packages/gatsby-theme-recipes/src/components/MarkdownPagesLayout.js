@@ -4,8 +4,8 @@ import { css, jsx } from "@emotion/core";
 import { Styled } from "theme-ui";
 import { MDXProvider } from "@mdx-js/react";
 
-import PageLayout from "./PageLayout";
-import BackLink from "./BackLink";
+import PageLayout from "../components/PageLayout";
+import BackLink from "../components/BackLink";
 
 import StyledParagraph from "./StyledParagraph";
 import useSiteMetadata from "../hooks/use-sitemetadata";
@@ -24,19 +24,18 @@ const components = {
   StyledParagraph
 };
 
-const MarkdownLayout = ({ children }) => {
+const MarkdownPagesLayout = ({ children }) => {
   const { basePath } = useSiteMetadata();
   return (
     <MDXProvider components={components}>
-      lorem ipsum pagelayout
       <PageLayout>
+        <BackLink path={basePath}>Back to recipes</BackLink>
         <div
           css={css`
-            columns: 2 auto;
+            /* columns: 2 auto;
             column-width: 450px;
             column-gap: 40px;
-            column-fill: balance;
-            border: 20px solid red;
+            column-fill: balance; */
             ul {
               p {
                 display: inline-block;
@@ -69,4 +68,4 @@ const MarkdownLayout = ({ children }) => {
   );
 };
 
-export default MarkdownLayout;
+export default MarkdownPagesLayout;
