@@ -2,7 +2,7 @@
 
 A Gatsby theme for recipe enthusiasts.
 
-## [Demo](http://recipes-demo.marinda.me/)
+## [Demo](https://recipes-demo.marinda.me/)
 
 ---
 ## Yarn workspace tasks:
