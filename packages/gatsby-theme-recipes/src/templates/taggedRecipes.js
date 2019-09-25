@@ -38,7 +38,6 @@ const RecipesTemplate = ({
   pageContext: { currentPage, numPages, tag }
 }) => {
   const { intro, basePath } = useSiteMetadata();
-  console.log({ basePath, tag });
   return (
     <PageLayout>
       <PageIntro>{intro}</PageIntro>
