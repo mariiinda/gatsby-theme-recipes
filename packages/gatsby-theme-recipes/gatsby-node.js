@@ -1,5 +1,4 @@
 const fs = require("fs");
-const path = require("path");
 
 // Make sure the recipes directory exists
 exports.onPreBootstrap = ({ reporter }, { contentPath = "posts" }) => {
