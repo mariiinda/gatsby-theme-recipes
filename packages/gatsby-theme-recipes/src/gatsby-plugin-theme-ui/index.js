@@ -6,12 +6,12 @@
 
 export default {
   colors: {
-    text: "#120126",
+    text: "#362101",
     background: "#fff",
     primary: "#f04530",
-    secondary: "#663399",
+    secondary: "#862E9C",
     accent: "#017c9e",
-    muted: "#FBF1E0"
+    muted: "#F9E7C9"
   },
   fonts: {
     body: "'Raleway', Arial, Helvetica, sans-serif",
@@ -114,7 +114,11 @@ export default {
       maxWidth: "xl",
       display: "flex",
       flexDirection: "column",
-      flex: 1,
+      flex: 1
+    },
+    Main: {
+      display: "flex",
+      flexDirection: "column",
       h1: {
         margin: 0,
         mt: 4,
@@ -149,15 +153,16 @@ export default {
         textTransform: "capitalize"
       },
       ul: {
-        maxWidth: "650px"
+        maxWidth: "md",
+        mb: 3
       },
       table: {
         border: "1px solid transparent",
         borderLeft: "none",
         borderRight: "none",
         borderColor: "muted",
-        width: "100%",
-        breakInside: "avoid",
+        width: "auto",
+        minWidth: "48%",
         py: 4,
         px: 4,
         th: {
@@ -173,11 +178,11 @@ export default {
           textAlign: "left",
           px: 2
         }
+      },
+      p: {
+        maxWidth: "md",
+        mb: 3
       }
-    },
-    Main: {
-      display: "flex",
-      flexDirection: "column"
     },
     Footer: {
       position: "relative",

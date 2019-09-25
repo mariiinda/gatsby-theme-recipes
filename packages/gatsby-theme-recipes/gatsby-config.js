@@ -11,6 +11,8 @@ module.exports = ({
     siteMetadata: {
       title,
       description: "Delicious recipes you’ll want to keep making.",
+      url: "",
+      author: "",
       intro: "Delicious recipes you’ll want to keep making.",
       basePath,
       menuLinks: [
@@ -27,30 +29,51 @@ module.exports = ({
       ]
     },
     plugins: [
+      {
+        resolve: "gatsby-plugin-page-creator",
+        options: {
+          path: `${__dirname}/src/pages`
+        }
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: "pages",
+          path: `${__dirname}/src/pages/`
+        }
+      },
+      {
+        resolve: "gatsby-source-filesystem",
+        options: {
+          path: `${__dirname}/${"recipes"}`
+        }
+      },
+      {
+        resolve: "gatsby-source-filesystem",
+        options: {
+          path: contentPath
+        }
+      },
       "gatsby-transformer-sharp",
       "gatsby-plugin-sharp",
       {
         resolve: "gatsby-plugin-mdx",
         options: {
           defaultLayouts: {
-            default: require.resolve("./src/components/MarkdownLayout.js")
+            default: require.resolve("./src/components/MarkdownPagesLayout.js"),
+            pages: require.resolve("./src/components/MarkdownLayout.js")
           },
           gatsbyRemarkPlugins: [
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 650,
+                maxWidth: 510,
+                maxHeight: 510,
                 linkImagesToOriginal: false,
                 withWebp: true
               }
             }
           ]
-        }
-      },
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/src/pages`
         }
       },
       "gatsby-plugin-theme-ui",
@@ -71,20 +94,7 @@ module.exports = ({
         }
       },
       "gatsby-plugin-react-helmet",
-      "gatsby-plugin-emotion",
-
-      {
-        resolve: "gatsby-source-filesystem",
-        options: {
-          path: `${__dirname}/${"recipes"}`
-        }
-      },
-      {
-        resolve: "gatsby-source-filesystem",
-        options: {
-          path: contentPath
-        }
-      }
+      "gatsby-plugin-emotion"
     ]
   };
 };

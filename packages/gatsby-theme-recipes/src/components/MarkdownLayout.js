@@ -32,25 +32,14 @@ const MarkdownLayout = ({ children }) => {
         <BackLink path={basePath}>Back to recipes</BackLink>
         <div
           css={css`
-            columns: 2 auto;
-            column-width: 450px;
-            column-gap: 40px;
-            column-fill: balance;
             ul {
               p {
                 display: inline-block;
               }
             }
-            p {
-              max-width: 680px;
-            }
-            img {
-              float: right;
-              max-width: 680px;
-            }
             .gatsby-resp-image-wrapper {
+              clear: both;
               width: 100%;
-              break-inside: avoid;
               img {
                 position: absolute;
                 top: 0;

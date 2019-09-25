@@ -32,7 +32,7 @@ exports.createPages = async (
 
   const recipes = result.data.allMdx.nodes;
 
-  const recipesPerPage = 6;
+  const recipesPerPage = 12;
   const numPages = Math.ceil(recipes.length / recipesPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({

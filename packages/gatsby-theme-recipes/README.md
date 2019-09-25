@@ -78,6 +78,10 @@ module.exports = {
   siteMetadata: {
     // Used for SEO
     description: 'My site description...',
+    // Used for SEO. Do not include a trailing slash
+    url: 'https://www.example.com',
+    // Used for SEO
+    author: 'John Doe',
     // Used for an optional intro section at the top of the recipes template
     intro: 'Classic recipes you’ll want to keep making.',
     // Used for the top navigation links

@@ -12,7 +12,8 @@
     "serve-demo": "yarn workspace demo serve",
     "lint-demo": "yarn workspace demo lint",
     "format-demo": "yarn workspace demo format",
-    "serve": "yarn workspace demo build && yarn workspace demo serve"
+    "serve": "yarn workspace demo build && yarn workspace demo serve",
+    "optimize-images": "yarn workspace @marinda/gatsby-theme-recipes optimize && yarn workspace demo optimize"
   },
   "workspaces": [
     "packages/*"
