@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = ({
   basePath = "/",
-  contentPath = "recipes",
+  contentPath = "posts",
   iconPath,
   title = "Delicious Recipes",
   shortTitle = "Recipes"
