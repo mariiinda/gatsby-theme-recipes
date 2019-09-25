@@ -7,6 +7,8 @@
 module.exports = {
   siteMetadata: {
     description: "Classic recipes you’ll want to keep making.",
+    url: "",
+    author: "",
     intro: "Classic recipes you’ll want to keep making.",
     menuLinks: [
       {

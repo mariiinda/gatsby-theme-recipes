@@ -11,6 +11,8 @@ module.exports = ({
     siteMetadata: {
       title,
       description: "Delicious recipes you’ll want to keep making.",
+      url: "",
+      author: "",
       intro: "Delicious recipes you’ll want to keep making.",
       basePath,
       menuLinks: [
@@ -27,13 +29,39 @@ module.exports = ({
       ]
     },
     plugins: [
+      {
+        resolve: "gatsby-plugin-page-creator",
+        options: {
+          path: `${__dirname}/src/pages`
+        }
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: "pages",
+          path: `${__dirname}/src/pages/`
+        }
+      },
+      {
+        resolve: "gatsby-source-filesystem",
+        options: {
+          path: `${__dirname}/${"recipes"}`
+        }
+      },
+      {
+        resolve: "gatsby-source-filesystem",
+        options: {
+          path: contentPath
+        }
+      },
       "gatsby-transformer-sharp",
       "gatsby-plugin-sharp",
       {
         resolve: "gatsby-plugin-mdx",
         options: {
           defaultLayouts: {
-            default: require.resolve("./src/components/MarkdownLayout.js")
+            default: require.resolve("./src/components/PagesLayout.js"),
+            pages: require.resolve("./src/components/MarkdownLayout.js")
           },
           gatsbyRemarkPlugins: [
             {
@@ -45,12 +73,6 @@ module.exports = ({
               }
             }
           ]
-        }
-      },
-      {
-        resolve: "gatsby-plugin-page-creator",
-        options: {
-          path: `${__dirname}/src/pages`
         }
       },
       "gatsby-plugin-theme-ui",
@@ -71,20 +93,7 @@ module.exports = ({
         }
       },
       "gatsby-plugin-react-helmet",
-      "gatsby-plugin-emotion",
-
-      {
-        resolve: "gatsby-source-filesystem",
-        options: {
-          path: `${__dirname}/${"recipes"}`
-        }
-      },
-      {
-        resolve: "gatsby-source-filesystem",
-        options: {
-          path: contentPath
-        }
-      }
+      "gatsby-plugin-emotion"
     ]
   };
 };

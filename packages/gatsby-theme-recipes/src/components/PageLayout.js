@@ -14,11 +14,14 @@ import { Link } from "gatsby";
 import MenuLinks from "./MenuLinks";
 import FooterLinks from "./FooterLinks";
 import useSiteMetadata from "../hooks/use-sitemetadata";
+import defaultImage from "../images/og-image.jpg";
 
 const PageLayout = ({ children }) => {
   const {
     title = "",
     description = "",
+    url = "",
+    author = "",
     menuLinks = [],
     footerLinks = [],
     basePath
@@ -41,6 +44,15 @@ const PageLayout = ({ children }) => {
           <html lang="en" />
           <title>{title}</title>
           <meta name="description" content={description} />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:image" content={`${url}${defaultImage}`} />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:creator" content={author} />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={description} />
+          <meta name="twitter:image" content={`${url}${defaultImage}`} />
         </Helmet>
         <Container>
           <Header>
