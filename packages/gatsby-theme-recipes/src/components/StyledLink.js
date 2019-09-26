@@ -35,17 +35,27 @@ export const linkStyle = ({ theme, size }) => css`
   }
 `;
 
-const StyledLink = ({ to = "", children, size = "default", ...props }) => {
+const StyledLink = ({
+  as: Element,
+  to = "",
+  children,
+  size = "default",
+  ...props
+}) => {
   return (
-    <Link
+    <Element
       to={to}
-      activeClassName="active"
+      {...(Element !== "a" && { activeClassName: "active" })}
       css={theme => linkStyle({ theme, size })}
       {...props}
     >
       {children}
-    </Link>
+    </Element>
   );
+};
+
+StyledLink.defaultProps = {
+  as: Link
 };
 
 export default StyledLink;

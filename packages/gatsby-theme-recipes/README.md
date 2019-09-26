@@ -140,3 +140,11 @@ If you want to use [component shadowing](https://www.gatsbyjs.org/blog/2019-04-2
 ```
 src/@marinda/gatsby-theme-recipes/components/StyledParagraph.js
 ```
+
+## If you like it, please rate it
+
+If you enjoy using it, please star it!
+
+## Feedback
+
+Send me an [email](mailto:hello@marinda.me), or create an [issue](https://github.com/mariiinda/gatsby-theme-recipes/issues).

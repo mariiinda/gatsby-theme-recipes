@@ -8,7 +8,8 @@ import BackLink from "./BackLink";
 import PageImage from "./PageImage";
 import StyledParagraph from "./StyledParagraph";
 import useSiteMetadata from "../hooks/use-sitemetadata";
-import PageTransition from "../components/PageTransition";
+import PageTransition from "./PageTransition";
+import PageLink from "./PageLink";
 
 const components = {
   h1: Styled.h1,
@@ -22,7 +23,8 @@ const components = {
   ul: Styled.ul,
   p: Styled.p,
   StyledParagraph,
-  Image: PageImage
+  Image: PageImage,
+  a: PageLink
 };
 
 const componentCSS = ({ sizes = {} }) => css`

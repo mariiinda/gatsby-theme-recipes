@@ -20,6 +20,10 @@ module.exports = {
       {
         name: "Privacy Policy & Cookies",
         href: "/privacy-policy"
+      },
+      {
+        name: "Gatsby Theme source code",
+        href: "https://github.com/mariiinda/gatsby-theme-recipes"
       }
     ]
   },
