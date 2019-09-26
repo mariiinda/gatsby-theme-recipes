@@ -11,14 +11,13 @@ const componentStyles = ({ theme: { space = [] }, position }) => css`
     margin-top: 0;
     width: 50%;
     float: ${position};
-    display: flex;
-    justify-content: ${position === "left" ? "flex-start" : "flex-end"};
   }
   img {
     width: 100%;
     float: none;
     @media (min-width: 420px) {
       width: 90%;
+      float: ${position};
     }
   }
 `;
