@@ -10,7 +10,7 @@ A Gatsby theme for recipe enthusiasts.
 - Optimized images
 - Tags for you recipes
 - Customizable Theme-UI theme
-- Pagination of recipes per page exceeds 12 items
+- Pagination if recipes per page exceeds 12 items
 
 ## Installation
 
