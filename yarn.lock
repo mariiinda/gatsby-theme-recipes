@@ -1215,12 +1215,13 @@
   dependencies:
     core-js "^2.5.7"
 
-"@marinda/react-styled-buttons@^0.1.21":
-  version "0.1.21"
-  resolved "https://registry.yarnpkg.com/@marinda/react-styled-buttons/-/react-styled-buttons-0.1.21.tgz#662ba18dfd76d04491a5a64448c9dfd9f9472892"
-  integrity sha512-SHFcTBHjWM7P/mwTYTGlFXheeBNHtdW7TwfM3EH8GzOOv7/9mEgV6MkHVaZk8KpVqinnlkmKGeLndMc9x6Hx9A==
+"@marinda/react-styled-buttons@^1.1.21":
+  version "1.1.21"
+  resolved "https://registry.yarnpkg.com/@marinda/react-styled-buttons/-/react-styled-buttons-1.1.21.tgz#a5752ecf315da2a2343865d62d091cf2f2da82dd"
+  integrity sha512-NNXaMw8f3nO7eiQUDajN1rr5YrErxyE45bIWputsLkbaV9Lc5GRYrS6zw5YXSuUW14V2auLq5XMDOzbwEkUQjw==
   dependencies:
     chroma-js "^2.0.4"
+    prop-types "^15.7.2"
 
 "@mdx-js/mdx@^1.4.5":
   version "1.5.0"
