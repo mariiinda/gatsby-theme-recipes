@@ -28,6 +28,14 @@ This repo makes use of [yarn workspaces](https://yarnpkg.com/lang/en/docs/worksp
 ### Clean
 `yarn clean-demo`
 
+## If you like it, please rate it
+
+If you enjoy using it, please star it!
+
+## Feedback
+
+Send me an [email](mailto:hello@marinda.me), or create an [issue](https://github.com/mariiinda/gatsby-theme-recipes/issues).
+
 
 
 

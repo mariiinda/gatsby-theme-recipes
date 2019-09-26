@@ -7,6 +7,7 @@ import PageLayout from "../components/PageLayout";
 import BackLink from "../components/BackLink";
 import StyledParagraph from "./StyledParagraph";
 import useSiteMetadata from "../hooks/use-sitemetadata";
+import PageLink from "./PageLink";
 
 const components = {
   h1: Styled.h1,
@@ -19,7 +20,8 @@ const components = {
   th: Styled.th,
   ul: Styled.ul,
   p: Styled.p,
-  StyledParagraph
+  StyledParagraph,
+  a: PageLink
 };
 
 const MarkdownLayout = ({ children }) => {
