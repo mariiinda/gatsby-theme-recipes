@@ -38,7 +38,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.17",
     "@emotion/styled": "^10.0.17",
-    "@marinda/react-styled-buttons": "^1.1.21",
+    "@marinda/react-styled-buttons": "^1.3.21",
     "@mdx-js/mdx": "^1.4.5",
     "@mdx-js/react": "^1.4.5",
     "eslint-plugin-emotion": "^10.0.14",
