@@ -26,7 +26,7 @@ const createGridTemplate = length => {
     case 9:
       return `"i1 i2 i4" "i1 i3 i4" "i5 i6 i6" "i5 i8 i9" "i7 i8 i9"`;
     case 10:
-      return `"i1 i2 i4" "i1 i3 i4" "i5 i6 i9" "i5 i7 i9" "i8 i7 i10" "i8 i11 i11"`;
+      return `"i1 i2 i4" "i1 i3 i4" "i5 i3 i6" "i5 i7 i9" "i8 i7 i9" "i8 i7 i10"`;
     case 11:
       return `"i1 i2 i4" "i1 i3 i4" "i5 i6 i9" "i5 i7 i9" "i8 i7 i10" "i8 i11 i11"`;
     default:

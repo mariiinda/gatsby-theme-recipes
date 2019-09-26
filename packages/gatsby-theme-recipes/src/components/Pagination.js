@@ -67,7 +67,7 @@ const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
               size="small"
               css={theme => buttonCSS(theme)}
               theme={globalTheme}
-              variant="secondary"
+              variant="primary"
             >
               ← Previous Page
             </Button>
@@ -92,7 +92,7 @@ const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
               size="small"
               css={theme => buttonCSS(theme)}
               theme={globalTheme}
-              variant="secondary"
+              variant="primary"
             >
               Next Page →
             </Button>

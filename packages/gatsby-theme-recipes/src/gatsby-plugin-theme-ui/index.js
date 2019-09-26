@@ -8,7 +8,7 @@ export default {
   colors: {
     text: "#362101",
     background: "#fff",
-    primary: "#f04530",
+    primary: "#d61c04",
     secondary: "#862E9C",
     accent: "#017c9e",
     muted: "#F9E7C9"
@@ -64,7 +64,7 @@ export default {
       fontSize: 3,
       "*::selection": {
         bg: "muted",
-        color: "primary"
+        color: "text"
       }
     },
     a: {

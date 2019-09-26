@@ -2,7 +2,7 @@
 
 A Gatsby theme for recipe enthusiasts.
 
-## [Demo](https://recipes-demo.marinda.me/)
+## [View the Demo](https://recipes-demo.marinda.me/)
 
 ## What you get from this theme
 
