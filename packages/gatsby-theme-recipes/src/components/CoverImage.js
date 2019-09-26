@@ -6,8 +6,8 @@ const componentStyles = css`
   float: right;
   position: relative;
   width: 50%;
-  clip-path: circle(50%);
-  shape-outside: circle(52%);
+  clip-path: circle(48%);
+  shape-outside: circle(54%);
   .gatsby-image-wrapper {
     width: 100%;
     height: 100%;
