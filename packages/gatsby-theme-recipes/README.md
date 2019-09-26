@@ -104,7 +104,7 @@ module.exports = {
 
 ### Exported components
 
-#### `Intro`
+#### `StyledParagraph`
 
 Introduction text that captures your reader's attention and entices them to read the rest of the recipe instructions.
 
