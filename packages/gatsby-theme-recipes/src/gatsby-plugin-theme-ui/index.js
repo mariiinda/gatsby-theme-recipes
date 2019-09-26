@@ -161,22 +161,25 @@ export default {
         borderLeft: "none",
         borderRight: "none",
         borderColor: "muted",
-        width: "auto",
+        width: ["100%", "auto"],
         minWidth: "48%",
-        py: 4,
-        px: 4,
+        tableLayout: "fixed",
+        py: [2, 4],
+        px: [0, 4],
         th: {
           fontWeight: "normal",
-          fontSize: 2,
+          fontSize: [1, 4],
           textTransform: "capitalize",
           textAlign: "left",
-          px: 2
+          px: [0, 2],
+          wordWrap: "break-word"
         },
         td: {
-          fontWeight: "normal",
-          fontSize: 4,
+          fontWeight: "bold",
+          fontSize: [1, 4],
           textAlign: "left",
-          px: 2
+          px: [0, 2],
+          wordWrap: "break-word"
         }
       },
       p: {
