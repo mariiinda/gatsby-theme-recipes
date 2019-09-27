@@ -1,5 +1,4 @@
 /** @jsx jsx */
-/* import { css, jsx } from "@emotion/core"; */
 import { jsx, Styled } from "theme-ui";
 
 const StyledParagraph = props => (
