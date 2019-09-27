@@ -22,8 +22,9 @@ module.exports = {
         href: "/privacy-policy"
       },
       {
-        name: "Gatsby Theme source code",
-        href: "https://github.com/mariiinda/gatsby-theme-recipes"
+        name: "Gatsby Theme Recipes on Github",
+        href:
+          "https://github.com/mariiinda/gatsby-theme-recipes/tree/master/packages/gatsby-theme-recipes"
       }
     ]
   },

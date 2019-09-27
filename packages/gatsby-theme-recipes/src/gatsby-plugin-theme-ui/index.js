@@ -40,6 +40,47 @@ export default {
     body: 1.5,
     heading: 1.125
   },
+  letterSpacings: {
+    heading: "-0.05em",
+    caps: "0.1em"
+  },
+  text: {
+    heading: {
+      fontFamily: "heading",
+      fontWeight: "heading",
+      lineHeight: "heading",
+      letterSpacing: "heading",
+      textTransform: "capitalize"
+    },
+    display: {
+      fontFamily: "heading",
+      fontWeight: "heading",
+      lineHeight: "heading",
+      letterSpacing: "heading",
+      fontSize: [5, 6, 7]
+    },
+    caps: {
+      textTransform: "uppercase",
+      letterSpacing: "caps"
+    },
+    large: {
+      fontSize: [3, 4, 5],
+      mb: [3, 4]
+    },
+    small: {
+      fontSize: [1, 2]
+    }
+  },
+  listItem: {
+    ingredient: {
+      pb: 2,
+      pl: 2,
+      borderBottom: "2px dotted",
+      borderColor: "muted",
+      display: "inline-block",
+      mb: 0
+    }
+  },
   radii: ["2px", "5px", "50%"],
   zIndices: [10, 20, 100],
   shadows: {
@@ -53,6 +94,150 @@ export default {
     md: 720,
     lg: 960,
     xl: 1140
+  },
+  markdownWrappers: {
+    pages: {
+      "*": {
+        mb: 3,
+        fontSize: [3, 4],
+        maxWidth: "md"
+      },
+      h1: {
+        margin: 0,
+        mt: 4,
+        color: "text",
+        fontSize: [6, 7],
+        variant: "text.heading"
+      },
+      h2: {
+        margin: 0,
+        mt: 4,
+        color: "text",
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      h3: {
+        margin: 0,
+        mt: 3,
+        color: "text",
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      h4: {
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      h5: {
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      h6: {
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      ul: {
+        mb: 4
+      },
+      ol: {
+        mb: 4
+      }
+    },
+    recipes: {
+      "*": {
+        mb: 3,
+        fontSize: [3, 4]
+      },
+      h1: {
+        margin: 0,
+        mt: 4,
+        color: "text",
+        fontSize: [6, 7],
+        variant: "text.heading"
+      },
+      h2: {
+        margin: 0,
+        mt: 4,
+        color: "text",
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      h3: {
+        margin: 0,
+        mt: 3,
+        color: "text",
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      h4: {
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      h5: {
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      h6: {
+        fontSize: [5, 6],
+        variant: "text.heading"
+      },
+      ul: {
+        maxWidth: "md",
+        px: 1,
+        listStyle: "inside",
+        p: {
+          display: "inline-block"
+        },
+        li: {
+          mb: [1, 2],
+          p: {
+            mb: [1, 2]
+          }
+        }
+      },
+      p: {
+        maxWidth: "md",
+        mb: [3, 4]
+      },
+      table: {
+        border: "1px solid transparent",
+        borderLeft: "none",
+        borderRight: "none",
+        borderColor: "muted",
+        width: ["100%", "auto"],
+        minWidth: "48%",
+        tableLayout: "fixed",
+        py: [2, 4],
+        px: [0, 4],
+        th: {
+          textAlign: "center",
+          fontWeight: "normal",
+          fontSize: [1, 4],
+          textTransform: "capitalize",
+
+          px: [0, 2],
+          wordWrap: "break-word"
+        },
+        td: {
+          textAlign: "center",
+          fontWeight: "bold",
+          fontSize: [1, 4],
+
+          px: [0, 2],
+          wordWrap: "break-word"
+        }
+      },
+      ".gatsby-resp-image-wrapper": {
+        width: ["90%", "100%"],
+        my: [3, 4],
+        img: {
+          position: "absolute",
+          top: "0",
+          left: "0",
+          width: "100%",
+          height: "100%"
+        }
+      }
+    }
   },
   styles: {
     root: {
@@ -81,7 +266,8 @@ export default {
     },
     Layout: {
       pt: 2,
-      border: `30px solid`,
+      borderWidth: ["10px", "32px"],
+      borderStyle: "solid",
       borderColor: "muted",
       display: "flex"
     },
@@ -114,78 +300,12 @@ export default {
       maxWidth: "xl",
       display: "flex",
       flexDirection: "column",
-      flex: 1
+      flex: 1,
+      padding: [3, 4, 5]
     },
     Main: {
       display: "flex",
-      flexDirection: "column",
-      h1: {
-        margin: 0,
-        mt: 4,
-        color: "text",
-        fontSize: [5, 6, 7],
-        lineHeight: "heading",
-        fontFamily: "heading",
-        fontWeight: "heading",
-        letterSpacing: "heading",
-        textTransform: "capitalize"
-      },
-      h2: {
-        margin: 0,
-        mt: 4,
-        color: "text",
-        fontSize: [3, 4, 6],
-        lineHeight: "heading",
-        fontFamily: "heading",
-        fontWeight: "heading",
-        letterSpacing: "heading",
-        textTransform: "capitalize"
-      },
-      h3: {
-        margin: 0,
-        mt: 4,
-        color: "text",
-        fontSize: [4, 5],
-        lineHeight: "heading",
-        fontFamily: "heading",
-        fontWeight: "heading",
-        letterSpacing: "heading",
-        textTransform: "capitalize"
-      },
-      ul: {
-        maxWidth: "md",
-        mb: 3
-      },
-      table: {
-        border: "1px solid transparent",
-        borderLeft: "none",
-        borderRight: "none",
-        borderColor: "muted",
-        width: ["100%", "auto"],
-        minWidth: "48%",
-        tableLayout: "fixed",
-        py: [2, 4],
-        px: [0, 4],
-        th: {
-          fontWeight: "normal",
-          fontSize: [1, 4],
-          textTransform: "capitalize",
-          textAlign: "left",
-          px: [0, 2],
-          wordWrap: "break-word"
-        },
-        td: {
-          fontWeight: "bold",
-          fontSize: [1, 4],
-          textAlign: "left",
-          px: [0, 2],
-          wordWrap: "break-word"
-        }
-      },
-      p: {
-        maxWidth: "md",
-        mb: 3
-      }
+      flexDirection: "column"
     },
     Footer: {
       position: "relative",
@@ -201,7 +321,21 @@ export default {
       nav: {
         position: "relative",
         a: {
-          mr: 3
+          position: "relative",
+          mr: 3,
+          display: "inline-block",
+          "&:after": {
+            position: "absolute",
+            top: 0,
+            right: "-10px",
+            content: "'|'",
+            display: ["none", "block"]
+          },
+          "&:last-child": {
+            "&:after": {
+              display: "none"
+            }
+          }
         }
       }
     }

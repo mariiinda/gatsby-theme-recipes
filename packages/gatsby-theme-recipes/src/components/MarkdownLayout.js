@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Styled } from "theme-ui";
+import { jsx, Styled } from "theme-ui";
 import { MDXProvider } from "@mdx-js/react";
 
 import PageLayout from "../components/PageLayout";
 import BackLink from "../components/BackLink";
 import StyledParagraph from "./StyledParagraph";
+import ListItem from "./ListItem";
 import useSiteMetadata from "../hooks/use-sitemetadata";
 import PageLink from "./PageLink";
 
@@ -21,6 +21,7 @@ const components = {
   ul: Styled.ul,
   p: Styled.p,
   StyledParagraph,
+  ListItem,
   a: PageLink
 };
 
@@ -30,28 +31,7 @@ const MarkdownLayout = ({ children }) => {
     <MDXProvider components={components}>
       <PageLayout>
         <BackLink path={basePath}>Back to recipes</BackLink>
-        <div
-          css={css`
-            ul {
-              p {
-                display: inline-block;
-              }
-            }
-            .gatsby-resp-image-wrapper {
-              clear: both;
-              width: 100%;
-              img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-              }
-            }
-          `}
-        >
-          {children}
-        </div>
+        <div sx={{ variant: "markdownWrappers.recipes" }}>{children}</div>
       </PageLayout>
     </MDXProvider>
   );
