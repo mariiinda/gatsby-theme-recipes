@@ -1,3 +1,5 @@
+![Screenshots of gatsby theme recipes demo site](assets/cover.jpg?raw=true)
+
 # Gatsby Theme Recipes
 
 A Gatsby theme for recipe enthusiasts.
