@@ -32,7 +32,8 @@ const PageLayout = ({ children }) => {
       <Global
         styles={{
           body: {
-            margin: "0"
+            margin: "0",
+            textUnderlinePosition: "under"
           },
           "*": {
             boxSizing: "border-box"

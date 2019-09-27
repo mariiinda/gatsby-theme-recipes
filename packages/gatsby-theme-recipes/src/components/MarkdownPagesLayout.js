@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Styled } from "theme-ui";
+import { jsx, Styled } from "theme-ui";
 import { MDXProvider } from "@mdx-js/react";
 
 import PageLayout from "./PageLayout";
@@ -27,32 +26,6 @@ const components = {
   a: PageLink
 };
 
-const componentCSS = ({ sizes = {} }) => css`
-  > * {
-    max-width: ${sizes.md}px;
-  }
-  img {
-    float: left;
-    width: 100%;
-  }
-  ul {
-    p {
-      display: inline-block;
-    }
-  }
-  .gatsby-resp-image-wrapper {
-    width: 100%;
-    break-inside: avoid;
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-`;
-
 const MarkdownPagesLayout = ({ children }) => {
   const { basePath } = useSiteMetadata();
   return (
@@ -60,7 +33,7 @@ const MarkdownPagesLayout = ({ children }) => {
       <PageLayout>
         <PageTransition>
           <BackLink path={basePath}>Back to recipes</BackLink>
-          <div css={theme => componentCSS(theme)}>{children}</div>
+          <div sx={{ variant: "markdownWrappers.pages" }}>{children}</div>
         </PageTransition>
       </PageLayout>
     </MDXProvider>

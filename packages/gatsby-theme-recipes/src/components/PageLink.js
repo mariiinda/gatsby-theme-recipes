@@ -7,9 +7,11 @@ const PageLink = ({ children, ...props }) => {
     <StyledLink
       as="a"
       css={css`
+        display: inline;
+        text-decoration: underline;
+        word-break: break-word;
         &::before {
-          width: 100%;
-          bottom: 1px;
+          display: none;
         }
       `}
       {...props}

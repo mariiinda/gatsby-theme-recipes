@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { jsx, Styled } from "theme-ui";
 import { graphql } from "gatsby";
-import { Styled } from "theme-ui";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import MarkdownLayout from "../components/MarkdownLayout";
@@ -27,15 +26,6 @@ export const query = graphql`
   }
 `;
 
-const componentStyle = css`
-  position: relative;
-`;
-
-const contentContainerStyle = css`
-  float: left;
-  margin: 0 0 20px !important;
-`;
-
 const RecipeTemplate = ({
   data: {
     mdx: {
@@ -47,14 +37,11 @@ const RecipeTemplate = ({
   return (
     <MarkdownLayout>
       <PageTransition>
-        <article css={componentStyle}>
-          <div css={contentContainerStyle}>
-            <CoverImage image={image} alt={title} />
-            <Styled.h1>{title}</Styled.h1>
-            <p>{date}</p>
-
-            <MDXRenderer>{body}</MDXRenderer>
-          </div>
+        <article>
+          <CoverImage image={image} alt={title} />
+          <Styled.h1>{title}</Styled.h1>
+          <time sx={{ variant: "text.small" }}>{date}</time>
+          <MDXRenderer>{body}</MDXRenderer>
         </article>
       </PageTransition>
     </MarkdownLayout>
