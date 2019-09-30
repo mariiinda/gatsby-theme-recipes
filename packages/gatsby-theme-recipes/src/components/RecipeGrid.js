@@ -6,7 +6,6 @@ import { graphql } from "gatsby";
 import RecipeCard from "../components/RecipeCard";
 
 const createGridTemplate = length => {
-  console.log({ length });
   switch (length) {
     case 1:
       return `"i1 i1 i1"
