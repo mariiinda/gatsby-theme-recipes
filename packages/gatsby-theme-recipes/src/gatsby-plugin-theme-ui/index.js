@@ -12,8 +12,7 @@ export default {
     secondary: "#862E9C",
     accent: "#017c9e",
     muted: "#F9E7C9",
-    grey: "#F0EEEA",
-    darkGrey: "#35332F"
+    grey: "#F0EEEA"
   },
   fonts: {
     body: "'Raleway', Arial, Helvetica, sans-serif",
