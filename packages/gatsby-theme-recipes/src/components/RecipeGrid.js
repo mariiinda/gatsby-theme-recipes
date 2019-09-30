@@ -6,41 +6,92 @@ import { graphql } from "gatsby";
 import RecipeCard from "../components/RecipeCard";
 
 const createGridTemplate = length => {
+  console.log({ length });
   switch (length) {
     case 1:
-      return `"i1 i1 i1" "i1 i1 i1"`;
+      return `"i1 i1 i1"
+              "i1 i1 i1"
+              "i1 i1 i1"`;
     case 2:
-      return `"i1 i1 i2" "i1 i1 i2"`;
+      return `"i1 i1 i2"
+              "i1 i1 i2"`;
     case 3:
-      return `"i1 i2 i3" "i1 i2 i3"`;
+      return `"i1 i1 i1"
+              "i1 i1 i1"
+              "i2 i3 i3"
+              "i2 i3 i3"`;
     case 4:
-      return `"i1 i2 i4" "i1 i3 i4"`;
+      return `"i1 i1 i2"
+              "i1 i1 i2"
+              "i3 i4 i4"
+              "i3 i4 i4"`;
     case 5:
-      return `"i1 i2 i4" "i1 i3 i4" "i5 i5 i4"`;
+      return `"i1 i2 i3"
+              "i1 i2 i3"
+              "i4 i2 i5"
+              "i4 i2 i5"`;
     case 6:
-      return `"i1 i2 i4" "i1 i3 i4" "i5 i5 i6"`;
+      return `"i1 i2 i4"
+              "i1 i3 i4"
+              "i5 i5 i6"
+              "i5 i5 i6"`;
     case 7:
-      return `"i1 i2 i4" "i1 i3 i4" "i5 i3 i6" "i5 i7 i6"`;
+      return `"i1 i2 i4"
+              "i1 i3 i4"
+              "i5 i3 i6"
+              "i5 i7 i6"`;
     case 8:
-      return `"i1 i2 i4" "i1 i3 i4" "i5 i6 i8" "i5 i7 i8"`;
+      return `"i1 i2 i4"
+              "i1 i3 i4"
+              "i5 i6 i8"
+              "i5 i7 i8"`;
     case 9:
-      return `"i1 i2 i4" "i1 i3 i4" "i5 i6 i6" "i5 i8 i9" "i7 i8 i9"`;
+      return `"i1 i2 i2"
+              "i1 i2 i2"
+              "i1 i5 i3"
+              "i4 i5 i7"
+              "i4 i6 i7"
+              "i8 i6 i9"`;
     case 10:
-      return `"i1 i2 i4" "i1 i3 i4" "i5 i3 i6" "i5 i7 i9" "i8 i7 i9" "i8 i7 i10"`;
+      return `"i1 i2 i2"
+              "i1 i2 i2"
+              "i1 i5 i3"
+              "i4 i5 i7"
+              "i4 i6 i7"
+              "i8 i6 i9"
+              "i8 i10 i9"`;
     case 11:
-      return `"i1 i2 i4" "i1 i3 i4" "i5 i6 i9" "i5 i7 i9" "i8 i7 i10" "i8 i11 i11"`;
+      return `"i1 i2 i2"
+              "i1 i2 i2"
+              "i1 i5 i3"
+              "i4 i5 i7"
+              "i4 i6 i7"
+              "i8 i6 i9"
+              "i8 i6 i11"
+              "i8 i10 i11"`;
     default:
-      return `"i1 i2 i4" "i1 i3 i4" "i5 i5 i6" "i7 i8 i10" "i7 i9 i10" "i11 i11 i12"`;
+      return `"i1 i2 i4"
+              "i1 i3 i4"
+              "i5 i6 i8"
+              "i5 i7 i8"
+              "i9 i10 i12"
+              "i9 i11 i12"`;
   }
 };
 
 const gridParentCSS = length => css`
+  padding-top: 200px;
+  clear: both;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-auto-rows: 200px;
   grid-gap: 1rem;
   padding-top: 40px;
+
+  @media (min-width: 520px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 
   @media (min-width: 768px) {
     display: grid;

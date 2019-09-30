@@ -5,63 +5,75 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 const componentStyles = ({
-  colors: { background, primary },
-  fontSizes: [, , , , fontSizeFive],
-  zIndices: [, middle]
+  colors: { background, grey, primary, text },
+  fontSizes: [, , , , fontSizeFive]
 }) =>
   css`
     position: relative;
-    display: block;
-    color: ${background};
+    display: flex;
+    flex-direction: column;
+    color: ${text};
+    background: ${grey};
     width: 100%;
     height: 100%;
-    overflow: hidden;
     text-decoration: none;
     font-size: ${fontSizeFive};
     letter-spacing: 1px;
-
-    span {
-      position: absolute;
-      z-index: ${middle};
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      text-transform: capitalize;
-      opacity: 0;
-      transform: translateY(-30px);
-      transition: all 0.3s ease-in-out;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      display: block;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: ${primary};
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease-in-out;
+    will-change: auto;
+    overflow: hidden;
 
     &:hover,
     &:focus {
-      span {
-        transform: translateY(0);
-        opacity: 1;
-        color: ${background};
-      }
-      &::after {
-        opacity: 0.9;
+      color: ${text};
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+      background: ${background};
+      color: ${primary};
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
       }
     }
   `;
+
+const imageWrapperStyles = css`
+  flex: 0 1 70%;
+
+  .gatsby-image-wrapper {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    height: 100%;
+    > div {
+      padding-bottom: 0 !important;
+    }
+
+    img {
+      will-change: auto;
+      transition: 0.6s ease-out !important;
+      transform-origin: center;
+    }
+  }
+`;
+
+const titleWrapperStyles = ({ fontSizes, sizes }) => css`
+  text-transform: capitalize;
+  font-size: ${fontSizes[3]};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 70px;
+
+  @media (min-width: ${sizes.md}px) {
+    font-size: ${fontSizes[2]};
+  }
+
+  @media (min-width: ${sizes.lg}px) {
+    font-size: ${fontSizes[3]};
+  }
+`;
 
 const RecipeCard = ({ recipe: { title, slug, image }, ...props }) => {
   return (
@@ -71,8 +83,10 @@ const RecipeCard = ({ recipe: { title, slug, image }, ...props }) => {
       css={theme => componentStyles(theme)}
       {...props}
     >
-      <Img fluid={image.sharp.fluid} style={{ position: "static" }} />
-      <span>{title}</span>
+      <div css={imageWrapperStyles}>
+        <Img fluid={image.sharp.fluid} />
+      </div>
+      <div css={theme => titleWrapperStyles(theme)}>{title}</div>
     </Styled.a>
   );
 };
