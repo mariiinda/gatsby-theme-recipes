@@ -6,8 +6,8 @@ A Gatsby theme for recipe enthusiasts.
   <a href="https://www.npmjs.com/package/@marinda/gatsby-theme-recipes" target="_blank">
     <img src="https://badgen.net/npm/v/@marinda/gatsby-theme-recipes" alt="">
     </a>
-  <a href="LICENSE.md" target="_blank">
-    <img src="https://badgen.net/badge/license/ISC/blue" alt="">
+  <a href="https://github.com/mariiinda/gatsby-theme-recipes/blob/master/packages/gatsby-theme-recipes/LICENSE" target="_blank">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Gatsby Theme Recipes is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.com/package/@marinda/gatsby-theme-recipes" target="_blank">
     <img src="https://badgen.net/npm/dt/@marinda/gatsby-theme-recipes" alt="">
