@@ -1,8 +1,20 @@
-![Screenshots of gatsby theme recipes demo site](assets/cover.jpg?raw=true)
-
 # Gatsby Theme Recipes
 
 A Gatsby theme for recipe enthusiasts.
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@marinda/gatsby-theme-recipes" target="_blank">
+    <img src="https://badgen.net/npm/v/@marinda/gatsby-theme-recipes" alt="">
+    </a>
+  <a href="LICENSE.md" target="_blank">
+    <img src="https://badgen.net/badge/license/ISC/blue" alt="">
+  </a>
+  <a href="https://www.npmjs.com/package/@marinda/gatsby-theme-recipes" target="_blank">
+    <img src="https://badgen.net/npm/dt/@marinda/gatsby-theme-recipes" alt="">
+  </a>
+</p>
+
+![Screenshots of gatsby theme recipes demo site](assets/cover.jpg?raw=true)
 
 ## [View the Demo](https://recipes-demo.marinda.me/)
 
