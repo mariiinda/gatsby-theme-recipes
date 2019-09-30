@@ -25,7 +25,8 @@ A Gatsby theme for recipe enthusiasts.
 - Tags for you recipes
 - Customizable Theme-UI theme
 - Pagination if recipes per page exceeds 12 items
-- SEO : meta tags
+- SEO: meta tags
+- Color modes: light & dark
 
 ## Installation
 
