@@ -7,6 +7,9 @@ const useSiteMetadata = () => {
         siteMetadata {
           title
           description
+          url
+          image
+          author
           intro
           basePath
           menuLinks {

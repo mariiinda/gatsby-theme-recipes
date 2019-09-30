@@ -3,6 +3,7 @@ import { jsx, Styled } from "theme-ui";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
+import SEO from "../components/SEO";
 import MarkdownLayout from "../components/MarkdownLayout";
 import CoverImage from "../components/CoverImage";
 import PageTransition from "../components/PageTransition";
@@ -35,16 +36,17 @@ const RecipeTemplate = ({
   }
 }) => {
   return (
-    <MarkdownLayout>
-      <PageTransition>
-        <article>
+    <article>
+      <SEO title={title} image={image.sharp.fluid.src} />
+      <MarkdownLayout>
+        <PageTransition>
           <CoverImage image={image} alt={title} />
           <Styled.h1>{title}</Styled.h1>
           <time sx={{ variant: "text.small" }}>{date}</time>
           <MDXRenderer>{body}</MDXRenderer>
-        </article>
-      </PageTransition>
-    </MarkdownLayout>
+        </PageTransition>
+      </MarkdownLayout>
+    </article>
   );
 };
 

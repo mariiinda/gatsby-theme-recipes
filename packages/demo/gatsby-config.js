@@ -7,7 +7,8 @@
 module.exports = {
   siteMetadata: {
     description: "Classic recipes you’ll want to keep making.",
-    url: "https://recipes-demo.marinda.me",
+    url: "https://recipes-demo.marinda.me", // No trailing slash allowed!
+    image: "/images/og-image.jpg", // Path to your image you placed in the 'static' folder
     author: "",
     intro: "Classic recipes you’ll want to keep making.",
     menuLinks: [

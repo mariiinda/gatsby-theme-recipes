@@ -10,8 +10,10 @@ module.exports = ({
   return {
     siteMetadata: {
       title,
+      titleTemplate: "%s · ",
       description: "Delicious recipes you’ll want to keep making.",
-      url: "",
+      url: "", // No trailing slash allowed!
+      image: "", // Path to your image you placed in the 'static' folder
       author: "",
       intro: "Delicious recipes you’ll want to keep making.",
       basePath,
@@ -64,7 +66,8 @@ module.exports = ({
                 maxWidth: 510,
                 maxHeight: 510,
                 linkImagesToOriginal: false,
-                withWebp: true
+                withWebp: true,
+                quality: 75
               }
             }
           ]
