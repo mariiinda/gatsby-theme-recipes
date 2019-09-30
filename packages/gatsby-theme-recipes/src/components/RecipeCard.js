@@ -19,7 +19,7 @@ const componentStyles = ({
     text-decoration: none;
     font-size: ${fontSizeFive};
     letter-spacing: 1px;
-    box-shadow: 0 0 1px 0 currentColor;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);
     transition: 0.5s ease-in-out;
     will-change: auto;
     overflow: hidden;
@@ -27,9 +27,6 @@ const componentStyles = ({
     &:hover,
     &:focus {
       color: ${text};
-      box-shadow: 0 0 2px 0 currentColor;
-      background: ${background};
-      color: ${primary};
     }
 
     &:hover {
@@ -40,7 +37,7 @@ const componentStyles = ({
   `;
 
 const imageWrapperStyles = css`
-  flex: 0 1 70%;
+  flex: 0 1 80%;
 
   .gatsby-image-wrapper {
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
@@ -64,7 +61,7 @@ const titleWrapperStyles = ({ fontSizes, sizes }) => css`
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex: 1 1 70px;
+  flex: 1 1 50px;
 
   @media (min-width: ${sizes.md}px) {
     font-size: ${fontSizes[2]};
