@@ -14,7 +14,7 @@ A Gatsby theme for recipe enthusiasts.
   </a>
 </p>
 
-![Screenshots of gatsby theme recipes demo site](../../assets/cover.jpgassets/cover.jpg?raw=true)
+![Screenshots of gatsby theme recipes demo site](https://github.com/mariiinda/gatsby-theme-recipes/raw/master/assets/cover.jpg?raw=true)
 
 ## [View the Demo](https://recipes-demo.marinda.me/)
 
