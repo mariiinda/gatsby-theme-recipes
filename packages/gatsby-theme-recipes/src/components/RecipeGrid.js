@@ -86,18 +86,18 @@ const createGridTemplate = length => {
               "i9 i11 i11"
               "i9 i11 i11"`;
     default:
-      return `"i1 i2 i3"
-              "i1 i2 i3"
-              "i4 i2 i5"
-              "i4 i2 i5"
-              "i6 i7 i5"
-              "i6 i7 i8"
-              "i9 i7 i8"
-              "i9 i7 i8"
-              "i9 i11 i10"
-              "i9 i11 i10"
-              "i12 i12 i10"
-              "i12 i12 i10"`;
+      return `"i1 i1 i2"
+              "i1 i1 i2"
+              "i3 i4 i4"
+              "i3 i4 i4"
+              "i5 i5 i6"
+              "i5 i5 i6"
+              "i7 i8 i8"
+              "i7 i8 i8"
+              "i9 i9 i10"
+              "i9 i9 i10"
+              "i11 i12 i12"
+              "i11 i12 i12"`;
   }
 };
 
