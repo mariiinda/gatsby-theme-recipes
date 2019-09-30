@@ -8,6 +8,7 @@ const useSiteMetadata = () => {
           title
           description
           url
+          image
           author
           intro
           basePath

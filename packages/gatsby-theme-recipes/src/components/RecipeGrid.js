@@ -83,7 +83,7 @@ export const query = graphql`
       slug
       image {
         sharp: childImageSharp {
-          fluid(quality: 90, maxWidth: 960) {
+          fluid(quality: 75, maxWidth: 960) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

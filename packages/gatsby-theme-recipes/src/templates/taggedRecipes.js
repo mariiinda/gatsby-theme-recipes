@@ -1,7 +1,7 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/core";
+import React from "react";
 import { graphql } from "gatsby";
 
+import SEO from "../components/SEO";
 import PageLayout from "../components/PageLayout";
 import RecipeGrid from "../components/RecipeGrid";
 import useSiteMetadata from "../hooks/use-sitemetadata";
@@ -37,18 +37,21 @@ const RecipesTemplate = ({
   },
   pageContext: { currentPage, numPages, tag }
 }) => {
-  const { intro, basePath } = useSiteMetadata();
+  const { intro, title, image, basePath } = useSiteMetadata();
   return (
-    <PageLayout>
-      <PageIntro>{intro}</PageIntro>
-      <Tags tags={tags.group} />
-      <RecipeGrid recipes={recipes} />
-      <Pagination
-        currentPage={currentPage}
-        numPages={numPages}
-        basePath={`${basePath}tags/${tag}/`}
-      />
-    </PageLayout>
+    <>
+      <SEO title={title} image={image} />
+      <PageLayout>
+        <PageIntro>{intro}</PageIntro>
+        <Tags tags={tags.group} />
+        <RecipeGrid recipes={recipes} />
+        <Pagination
+          currentPage={currentPage}
+          numPages={numPages}
+          basePath={`${basePath}tags/${tag}/`}
+        />
+      </PageLayout>
+    </>
   );
 };
 
