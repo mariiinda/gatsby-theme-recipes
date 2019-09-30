@@ -13,7 +13,7 @@ export default {
     secondary: "#862E9C",
     accent: "#F4D3E5",
     muted: "#F9E7C9",
-    grey: "#F0EEEA",
+    grey: "#F1F1F1",
     modes: {
       dark: {
         text: "#fff",
@@ -22,7 +22,7 @@ export default {
         secondary: "#862E9C",
         accent: "#AE246E",
         muted: "#1C0311",
-        grey: "#8e6d7b"
+        grey: "#3A0925"
       }
     }
   },
