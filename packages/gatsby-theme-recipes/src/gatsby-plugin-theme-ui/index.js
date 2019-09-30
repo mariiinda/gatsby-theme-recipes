@@ -5,14 +5,26 @@
  */
 
 export default {
+  useColorSchemeMediaQuery: true,
   colors: {
     text: "#362101",
     background: "#fff",
     primary: "#d61c04",
     secondary: "#862E9C",
-    accent: "#017c9e",
+    accent: "#F4D3E5",
     muted: "#F9E7C9",
-    grey: "#F0EEEA"
+    grey: "#F0EEEA",
+    modes: {
+      dark: {
+        text: "#fff",
+        background: "#48052B",
+        primary: "#FEAEA4",
+        secondary: "#862E9C",
+        accent: "#AE246E",
+        muted: "#1C0311",
+        grey: "#8e6d7b"
+      }
+    }
   },
   fonts: {
     body: "'Raleway', Arial, Helvetica, sans-serif",
@@ -332,11 +344,16 @@ export default {
             content: "'|'",
             display: ["none", "block"]
           },
-          "&:last-child": {
+          "&:last-of-type": {
             "&:after": {
               display: "none"
             }
           }
+        },
+        ".color-mode-btn": {
+          float: "right",
+          color: "text",
+          bg: "accent"
         }
       }
     }

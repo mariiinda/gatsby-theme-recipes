@@ -44,6 +44,24 @@ const linkCSS = theme => css`
 const buttonCSS = theme => css`
   text-decoration: none;
   margin: 0 ${theme.space[3]}px;
+  text-transform: capitalize;
+  color: ${theme.colors.text};
+  background: ${theme.colors.muted};
+
+  &:hover {
+    color: ${theme.colors.background};
+    background: ${theme.colors.primary};
+  }
+
+  &.active {
+    color: ${theme.colors.background};
+    background: ${theme.colors.primary};
+  }
+
+  &:focus {
+    box-shadow: 0 0px 8px ${theme.colors.primary},
+      0 0px 8px ${theme.colors.primary};
+  }
 `;
 
 const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
