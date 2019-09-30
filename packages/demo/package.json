@@ -15,7 +15,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "@marinda/gatsby-theme-recipes": "^1.1.7",
+    "@marinda/gatsby-theme-recipes": "^1.2.8",
     "gatsby": "^2.15.28",
     "react": "^16.10.1",
     "react-dom": "^16.10.1"
