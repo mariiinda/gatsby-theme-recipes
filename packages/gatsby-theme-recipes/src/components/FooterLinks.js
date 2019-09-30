@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { Fragment } from "react";
-import { Styled } from "theme-ui";
+import { Styled, useColorMode } from "theme-ui";
+import { Button } from "@marinda/react-styled-buttons";
 
 import StyledLink, { linkStyle } from "./StyledLink";
 
 const FooterLinks = ({ items }) => {
+  const [colorMode, setColorMode] = useColorMode();
   return (
     <nav>
       {items &&
@@ -28,6 +30,18 @@ const FooterLinks = ({ items }) => {
             </Fragment>
           );
         })}
+
+      <Button
+        type="button"
+        size="small"
+        variant="primary"
+        className="color-mode-btn"
+        onClick={() => {
+          setColorMode(colorMode === "default" ? "dark" : "default");
+        }}
+      >
+        {colorMode === "default" ? "Dark" : "Light"} Theme
+      </Button>
     </nav>
   );
 };

@@ -6,7 +6,9 @@ import {
   Footer,
   Main,
   Container,
-  Styled
+  Styled,
+  ThemeProvider,
+  ColorMode
 } from "theme-ui";
 import { Link } from "gatsby";
 
