@@ -30,51 +30,74 @@ const createGridTemplate = length => {
               "i4 i2 i5"
               "i4 i2 i5"`;
     case 6:
-      return `"i1 i2 i4"
-              "i1 i3 i4"
+      return `"i1 i1 i2"
+              "i1 i1 i2"
+              "i3 i4 i4"
+              "i3 i4 i4"
               "i5 i5 i6"
               "i5 i5 i6"`;
     case 7:
-      return `"i1 i2 i4"
-              "i1 i3 i4"
-              "i5 i3 i6"
-              "i5 i7 i6"`;
+      return `"i1 i1 i2"
+              "i1 i1 i2"
+              "i3 i4 i4"
+              "i3 i4 i4"
+              "i5 i5 i6"
+              "i5 i5 i6"
+              "i7 i7 i7"
+              "i7 i7 i7"`;
     case 8:
-      return `"i1 i2 i4"
-              "i1 i3 i4"
-              "i5 i6 i8"
-              "i5 i7 i8"`;
+      return `"i1 i1 i2"
+              "i1 i1 i2"
+              "i3 i4 i4"
+              "i3 i4 i4"
+              "i5 i5 i6"
+              "i5 i5 i6"
+              "i7 i8 i8"
+              "i7 i8 i8"`;
     case 9:
-      return `"i1 i2 i2"
-              "i1 i2 i2"
-              "i1 i5 i3"
-              "i4 i5 i7"
-              "i4 i6 i7"
-              "i8 i6 i9"`;
+      return `"i1 i1 i2"
+              "i1 i1 i2"
+              "i3 i4 i4"
+              "i3 i4 i4"
+              "i5 i5 i6"
+              "i5 i5 i6"
+              "i7 i8 i8"
+              "i7 i8 i8"
+              "i9 i9 i9"
+              "i9 i9 i9"`;
     case 10:
-      return `"i1 i2 i2"
-              "i1 i2 i2"
-              "i1 i5 i3"
-              "i4 i5 i7"
-              "i4 i6 i7"
-              "i8 i6 i9"
-              "i8 i10 i9"`;
+      return `"i1 i2 i3"
+              "i1 i2 i3"
+              "i4 i2 i5"
+              "i4 i2 i5"
+              "i6 i7 i8"
+              "i6 i7 i8"
+              "i9 i7 i10"
+              "i9 i7 i10"`;
     case 11:
-      return `"i1 i2 i2"
-              "i1 i2 i2"
-              "i1 i5 i3"
-              "i4 i5 i7"
-              "i4 i6 i7"
-              "i8 i6 i9"
-              "i8 i6 i11"
-              "i8 i10 i11"`;
+      return `"i1 i2 i3"
+              "i1 i2 i3"
+              "i4 i2 i5"
+              "i4 i2 i5"
+              "i6 i7 i8"
+              "i6 i7 i8"
+              "i9 i7 i10"
+              "i9 i7 i10"
+              "i9 i11 i11"
+              "i9 i11 i11"`;
     default:
-      return `"i1 i2 i4"
-              "i1 i3 i4"
-              "i5 i6 i8"
-              "i5 i7 i8"
-              "i9 i10 i12"
-              "i9 i11 i12"`;
+      return `"i1 i2 i3"
+              "i1 i2 i3"
+              "i4 i2 i5"
+              "i4 i2 i5"
+              "i6 i7 i5"
+              "i6 i7 i8"
+              "i9 i7 i8"
+              "i9 i7 i8"
+              "i9 i11 i10"
+              "i9 i11 i10"
+              "i12 i12 i10"
+              "i12 i12 i10"`;
   }
 };
 
