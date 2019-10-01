@@ -23,7 +23,7 @@ A Gatsby theme for recipe enthusiasts.
 - Write recipes in MDX
 - Optimized images
 - Tags for you recipes
-- Customizable Theme-UI theme
+- Customizable [Theme-UI](https://theme-ui.com/) theme
 - Pagination if recipes per page exceeds 12 items
 - SEO: meta tags
 - Color modes: light & dark
@@ -62,7 +62,7 @@ To use this theme in your Gatsby sites, follow these instructions:
 | `iconPath`          | default icon  | Path to the icon to be used for the favicon and web manifest. For example `'src/images/favicon.png'`. For best results provide a 512x512 square. | 
 
 | `title`          | `Delicious Recipes`  | Used for the site title, SEO and mobile home screen | 
-| `shortTitle`          | `Recipes`  | Used for mobile home screen | 
+| `shortTitle`          | `DRecipes`  | Used for mobile home screen | 
 
 #### Example usage
 
@@ -78,9 +78,9 @@ module.exports = {
       // the path to your icon file
       iconPath: 'src/images/favicon.png',
       // your site title
-      title = "Classic Recipes",
+      title = "Delicious Recipes",
       // your site short title
-      shortTitle = "C-R"
+      shortTitle = "DRecipes"
     },
 };
 ```
@@ -98,7 +98,7 @@ module.exports = {
     // Used for SEO. Do not include a trailing slash
     url: 'https://www.example.com',
     // Used for SEO
-    author: 'John Doe',
+    author: 'J Hollyhock',
     // Used for an optional intro section at the top of the recipes template
     intro: 'Classic recipes you’ll want to keep making.',
     // Used for the top navigation links
@@ -112,7 +112,7 @@ module.exports = {
     footerLinks: [
       {
         name: 'Instagram',
-        url: 'https://www.instagram.com/recipes',
+        href: 'https://www.instagram.com/recipes',
       },
     ],
   },
