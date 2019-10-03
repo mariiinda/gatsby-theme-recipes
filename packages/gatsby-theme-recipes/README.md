@@ -41,6 +41,7 @@ This guide will take you trough adding the theme to a new project.
 
 
 2. Folder structure
+
 The recommended project structure for your content and site looks like this:
 
 ```
