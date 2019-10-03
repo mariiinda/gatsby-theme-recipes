@@ -57,6 +57,7 @@ The recommended project structure for your content and site looks like this:
 ```
 
 3.  Create `gatsby-config.js` and add the theme:
+
 Add `@marinda/gatsby-theme-recipes` as a plugin in `gatsby-config.js`.
 `@marinda/gatsby-theme-recipes` is configurable through plugin options.
 
