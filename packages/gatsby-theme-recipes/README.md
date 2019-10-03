@@ -42,7 +42,7 @@ This guide will take you trough adding the theme to a new project.
 
 2. Folder structure
 
-The recommended project structure for your content and site looks like this:
+The following is the recommended folder structure:
 
 ```
   recipe-site
@@ -56,7 +56,7 @@ The recommended project structure for your content and site looks like this:
     └── package.json
 ```
 
-3.  Create `gatsby-config.js` and add the theme:
+1.  Create `gatsby-config.js` and add the theme:
 
 Add `@marinda/gatsby-theme-recipes` as a plugin in `gatsby-config.js`.
 `@marinda/gatsby-theme-recipes` is configurable through plugin options.
