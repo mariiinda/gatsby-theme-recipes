@@ -28,17 +28,36 @@ A Gatsby theme for recipe enthusiasts.
 - SEO: meta tags
 - Color modes: light & dark
 
-## Installation
+## Installation from scratch
 
-To use this theme in your Gatsby sites, follow these instructions:
+This guide will take you trough adding the theme to a new project.
 
-1.  Install the theme
+1.  Installation
 
     ```sh
-    npm install --save @marinda/gatsby-theme-recipes
+    npm i -S react react-dom gatsby @marinda/gatsby-theme-recipes
     ```
 
-2.  Add the theme to your `gatsby-config.js`:
+
+
+2. Folder structure
+The recommended project structure for your content and site looks like this:
+
+```
+  recipe-site
+    ├── recipes
+    │ ├── my-first-recipe
+    │ │   ├── images
+    │ │   │    └── my-first-recipe-image.jpg
+    │ │   └── my-first-recipe.mdx
+    ├── node_modules
+    ├── gatsby-config.js
+    └── package.json
+```
+
+3.  Create `gatsby-config.js` and add the theme:
+Add `@marinda/gatsby-theme-recipes` as a plugin in `gatsby-config.js`.
+`@marinda/gatsby-theme-recipes` is configurable through plugin options.
 
     ```js
     module.exports = {
@@ -46,10 +65,14 @@ To use this theme in your Gatsby sites, follow these instructions:
     };
     ```
 
-3.  Start your site
-    ```sh
-    gatsby develop
+1. Add following to your package.json scripts
+    ```json
+     "start": "gatsby develop",
+     "clean": "gatsby clean",
+     "build": "gatsby build",
     ```
+
+Run `npm start` to start the site.
 
 ## Usage
 
@@ -76,11 +99,11 @@ module.exports = {
       // contentPath defaults to 'recipes'
       contentPath: "posts",
       // the path to your icon file
-      iconPath: 'src/images/favicon.png',
+      iconPath: './src/images/favicon.png',
       // your site title
-      title = "Delicious Recipes",
+      title: "Delicious Recipes",
       // your site short title
-      shortTitle = "DRecipes"
+      shortTitle: "DRecipes"
     },
 };
 ```

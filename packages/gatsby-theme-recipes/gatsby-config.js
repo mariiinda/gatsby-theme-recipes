@@ -85,7 +85,7 @@ module.exports = ({
           display: "standalone",
           icon: iconPath
             ? path.resolve(iconPath)
-            : require.resolve("src/images/favicon.png"),
+            : require.resolve("./src/images/favicon.png"),
 
           crossOrigin: `use-credentials`
         }
