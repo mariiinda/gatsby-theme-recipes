@@ -162,10 +162,10 @@ module.exports = {
 ## Customization
 
 ### Changing styles
-Change the default theme styling by updating the [theme-ui](https://theme-ui.com/) values.
+Change the default theme styling by updating the [theme-ui](https://theme-ui.com/gatsby-plugin) properties.
 
-First, you must create a theme file and then you can override `theme` values.
-[See all theme](https://github.com/mariiinda/gatsby-theme-recipes/blob/b39c1f160558082aacac25ab327323b41b10fb49/packages/gatsby-theme-recipes/src/gatsby-plugin-theme-ui/index.js)
+First, you must create a theme file and then you can override `theme` properties.
+[See all theme](https://github.com/mariiinda/gatsby-theme-recipes/blob/b39c1f160558082aacac25ab327323b41b10fb49/packages/gatsby-theme-recipes/src/gatsby-plugin-theme-ui/index.js) properties.
 
 ```js
 // src/gatsby-plugin-theme-ui/index.js
