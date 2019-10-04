@@ -63,13 +63,19 @@ Add `@marinda/gatsby-theme-recipes` as a plugin in `gatsby-config.js`.
 
     ```js
     module.exports = {
-      plugins: ['@marinda/gatsby-theme-recipes'],
-      options: {
-        // your site title
-        title: "Classic Recipes",
-        // your site short title
-        shortTitle: "C-Recipes"
-      },
+       plugins: [
+        {
+          resolve: "@marinda/gatsby-theme-recipes",
+          options: {
+            // your site title
+            title: "Classic Recipes",
+            // your site short title
+            shortTitle: "C-Recipes",
+            // the path to your icon file
+            iconPath: "./src/images/favicon.png"
+          }
+        }
+      ]
     };
     ```
 
@@ -100,15 +106,19 @@ Recommended example usage
 ```js
 // gatsby-config.js
 module.exports = {
-  plugins: ['@marinda/gatsby-theme-recipes'],
-  options: {
-      // your site title
-      title: "Classic Recipes",
-      // your site short title
-      shortTitle: "C-Recipes",
-      // the path to your icon file
-      iconPath: './src/images/favicon.png'
-    },
+   plugins: [
+    {
+      resolve: "@marinda/gatsby-theme-recipes",
+      options: {
+        // your site title
+        title: "Classic Recipes",
+        // your site short title
+        shortTitle: "C-Recipes",
+        // the path to your icon file
+        iconPath: "./src/images/favicon.png"
+      }
+    }
+  ]
 };
 ```
 
