@@ -107,7 +107,7 @@ module.exports = {
       // your site title
       title: "Classic Recipes",
       // your site short title
-      shortTitle: "C-Recipes"
+      shortTitle: "C-Recipes",
       // the path to your icon file
       iconPath: './src/images/favicon.png'
     },
@@ -163,19 +163,62 @@ module.exports = {
 
 ## Customization
 
-### 404 Page
+### Changing styles
+Change the default theme styling by updating the [theme-ui](https://theme-ui.com/) values.
+
+First, you must create a theme file and then you can override `theme` values.
+[See all theme](https://github.com/mariiinda/gatsby-theme-recipes/blob/b39c1f160558082aacac25ab327323b41b10fb49/packages/gatsby-theme-recipes/src/gatsby-plugin-theme-ui/index.js)
+
+```js
+// src/gatsby-plugin-theme-ui/index.js
+
+import theme from '@marinda/gatsby-theme-recipes/src/gatsby-plugin-theme-ui';
+
+export default {
+  ...theme,
+  colors: {
+    ...theme.colors,
+    text: "#000",
+    background: "#fff",
+    primary: "#3b5bdb",
+    secondary: "#0ca678",
+    muted: "#F9DFC9",
+    modes: {
+      dark: {
+        ...theme.colors.modes.dark,
+        muted: "#472438"
+      }
+    }
+  }
+};
+```
+
+### Pages
+
+Content pages live in the 'src/pages' folder. You can add .mdx files in this folder. [View the demo site's about and privacy policy pages](https://github.com/mariiinda/gatsby-theme-recipes/tree/master/packages/demo/src/pages).
+
+### Markdown components:
+The following components available in .mdx files that live in 'posts' and 'src/pages'.
+
+#### `Image`
+
+Float an image left or right with the Image component.
+
+#### Example usage in MDX
+
+```mdx
+<Image alt="About" src="/images/about.jpg" position="right" />
+```
 
 #### `StyledParagraph`
 
-Introduction text that captures your reader's attention and entices them to read the rest of the recipe instructions.
+Introduction text that captures your reader's attention. It has a larger font size applied.
 
 #### Example usage in MDX
 
 In any MDX file:
 
 ```mdx
-import { StyledParagraph } from '@marinda/gatsby-theme-recipes';
-
 <StyledParagraph>These delicious choc-chip cookies are crispy on the outside and chewy on the inside.</StyledParagraph>
 ```
 
@@ -194,9 +237,9 @@ export default () => (
 );
 ```
 
-#### How to shadow this component
+#### How to shadow a component
 
-If you want to use [component shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/) with this component, create a file at the following path in your site:
+If you want to use [component shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/) with a component, for example 'src/components/StyledParagraph.js', create a file at the following path in your site:
 
 ```
 src/@marinda/gatsby-theme-recipes/components/StyledParagraph.js
