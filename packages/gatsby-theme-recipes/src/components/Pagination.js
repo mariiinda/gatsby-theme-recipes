@@ -5,7 +5,6 @@ import { Link } from "gatsby";
 import { Button } from "@marinda/react-styled-buttons";
 
 import StyledLink from "../components/StyledLink";
-import globalTheme from "../gatsby-plugin-theme-ui";
 
 const componentCSS = theme => css`
   display: flex;
@@ -84,7 +83,6 @@ const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
               rel="prev"
               size="small"
               css={theme => buttonCSS(theme)}
-              theme={globalTheme}
               variant="primary"
             >
               ← Previous Page
@@ -109,7 +107,6 @@ const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
               rel="next"
               size="small"
               css={theme => buttonCSS(theme)}
-              theme={globalTheme}
               variant="primary"
             >
               Next Page →
