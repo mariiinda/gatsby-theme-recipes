@@ -30,7 +30,7 @@ A Gatsby theme for recipe enthusiasts.
 
 ## Installation from scratch
 
-This guide will take you trough adding the theme to a new project.
+This guide will take you through adding the theme to a new project.
 
 1.  Installation
 
@@ -46,7 +46,7 @@ The following is the recommended folder structure:
 
 ```
   recipe-site
-    ├── recipes
+    ├── posts
     │ ├── my-first-recipe
     │ │   ├── images
     │ │   │    └── my-first-recipe-image.jpg
@@ -64,6 +64,12 @@ Add `@marinda/gatsby-theme-recipes` as a plugin in `gatsby-config.js`.
     ```js
     module.exports = {
       plugins: ['@marinda/gatsby-theme-recipes'],
+      options: {
+        // your site title
+        title: "Classic Recipes",
+        // your site short title
+        shortTitle: "C-Recipes"
+      },
     };
     ```
 
@@ -80,32 +86,32 @@ Run `npm start` to start the site.
 
 ### Theme Options
 
-| Key                 | Default Value | Description                                                                                                                                      |
-| ------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `basePath`          | `/`           | Root URL for all posts.                                                                                                                          |
-| `contentPath`       | `/recipes`    | Location of markdown files used for the posts.                                                                                                   |  |
-| `iconPath`          | default icon  | Path to the icon to be used for the favicon and web manifest. For example `'src/images/favicon.png'`. For best results provide a 512x512 square. | 
 
-| `title`          | `Delicious Recipes`  | Used for the site title, SEO and mobile home screen | 
-| `shortTitle`          | `DRecipes`  | Used for mobile home screen | 
+
+It is recommended to use the Default options, but if your project requires something else you can configure them to your need.
+
+| Option                 |     Default     |                                                             Description                                                             |
+| ---------------------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| basePath           |  /  |                                          Root URL where your site will be served from. `/recipes` will change all paths to start with `/recipes`.                                         |
+| contentPath         | posts |                                         Location of recipe content files.                                         |
+| title           |      Delicious Recipes      |                                                         Your site title, used for the site title, SEO and mobile home screen.                                                         |
+| shortTitle            |    Recipes     |                                                   A short title for your site, used for mobile home screen.                                                   |
+| iconPath               |        default icon        |                      Path to the icon to be used for the favicon and web manifest. For example `'src/images/favicon.png'`. For best results provide a 512x512 square.                      |
 
 #### Example usage
 
+Recommended example usage
 ```js
 // gatsby-config.js
 module.exports = {
   plugins: ['@marinda/gatsby-theme-recipes'],
   options: {
-      // basePath defaults to '/'
-      basePath: '/',
-      // contentPath defaults to 'recipes'
-      contentPath: "posts",
-      // the path to your icon file
-      iconPath: './src/images/favicon.png',
       // your site title
-      title: "Delicious Recipes",
+      title: "Classic Recipes",
       // your site short title
-      shortTitle: "DRecipes"
+      shortTitle: "C-Recipes"
+      // the path to your icon file
+      iconPath: './src/images/favicon.png'
     },
 };
 ```
@@ -122,6 +128,8 @@ module.exports = {
     description: 'My site description...',
     // Used for SEO. Do not include a trailing slash
     url: 'https://www.example.com',
+    // Site image used for social sharing, image should live in the 'static' folder
+    image: "/images/og-image.jpg",
     // Used for SEO
     author: 'J Hollyhock',
     // Used for an optional intro section at the top of the recipes template
