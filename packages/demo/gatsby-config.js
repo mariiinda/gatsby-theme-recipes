@@ -6,6 +6,8 @@
 
 module.exports = {
   siteMetadata: {
+    title: "Classic Recipes",
+    shortTitle: "Recipes",
     description: "Classic recipes you’ll want to keep making.",
     url: "https://recipes-demo.marinda.me", // No trailing slash allowed!
     image: "/images/og-image.jpg", // Path to your image you placed in the 'static' folder
@@ -33,9 +35,6 @@ module.exports = {
     {
       resolve: "@marinda/gatsby-theme-recipes",
       options: {
-        basePath: "/",
-        contentPath: "posts",
-        iconPath: "src/images/faviconalt.png",
         title: "Classic Recipes",
         shortTitle: "Recipes"
       }

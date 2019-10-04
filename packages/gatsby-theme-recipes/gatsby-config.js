@@ -11,11 +11,11 @@ module.exports = ({
     siteMetadata: {
       title,
       titleTemplate: "%s · ",
-      description: "Delicious recipes you’ll want to keep making.",
+      description: "",
       url: "", // No trailing slash allowed!
       image: "", // Path to your image you placed in the 'static' folder
       author: "",
-      intro: "Delicious recipes you’ll want to keep making.",
+      intro: "",
       basePath,
       menuLinks: [
         {
