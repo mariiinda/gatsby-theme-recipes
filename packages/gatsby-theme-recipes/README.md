@@ -18,29 +18,27 @@ A Gatsby theme for recipe enthusiasts.
 
 ## [View the Demo](https://recipes-demo.marinda.me/)
 
-## What you get from this theme
+## Why use this theme?
 
-- Write recipes in MDX
-- Optimized images
-- Tags for you recipes
-- Customizable [Theme-UI](https://theme-ui.com/) theme
-- Pagination if recipes per page exceeds 12 items
-- SEO: meta tags
-- Color modes: light & dark
+- Write recipes in markdown ([MDX](https://mdxjs.com/)).
+- Recipe images are automatically optimized for the web.
+- Tag your recipes with multiple tags.
+- Simple Customization with [Theme UI](https://theme-ui.com/).
+- Pagination (if recipes per page exceeds 12 items).
+- SEO, meta tags and social meta tags are built in.
+- Color modes: light & dark.
 
 ## Installation from scratch
 
 This guide will take you through adding the theme to a new project.
 
-1.  Installation
+### 1. Installation
 
     ```sh
     npm i -S react react-dom gatsby @marinda/gatsby-theme-recipes
     ```
 
-
-
-2. Folder structure
+### 2. Folder structure
 
 The following is the recommended folder structure:
 
@@ -55,8 +53,10 @@ The following is the recommended folder structure:
     ├── gatsby-config.js
     └── package.json
 ```
+Create a folder 'posts' and add at least one recipe inside.
+Its recommended to have a folder for each recipe, with a .mdx file for your recipe content and an image inside an images folder.
 
-1.  Create `gatsby-config.js` and add the theme:
+### 3. Create `gatsby-config.js` and add the theme:
 
 Add `@marinda/gatsby-theme-recipes` as a plugin in `gatsby-config.js`.
 `@marinda/gatsby-theme-recipes` is configurable through plugin options.
@@ -85,8 +85,6 @@ Run `npm start` to start the site.
 ## Usage
 
 ### Theme Options
-
-
 
 It is recommended to use the Default options, but if your project requires something else you can configure them to your need.
 
@@ -152,7 +150,20 @@ module.exports = {
 }
 ```
 
-### Exported components
+## Writing a recipe
+[View recipe example](https://github.com/mariiinda/gatsby-theme-recipes/blob/master/packages/demo/posts/chocolate-chip-cookies/chocolate-chip-cookies.mdx)
+
+| Key          | Required |    Type    |                                          Description                                          |
+| ------------ | :------: | :-------- | :------------------------------------------------------------------------------------------- |
+| title        | optional |   String   |  Recipe title.                  |
+| slug         | required |   String   |  Define a custom slug that will.                |
+| date         | optional |    Date    |  YYYY-MM-DD format                                       |
+| image         | required |    String    |  Image to be used as preview on recipe listings |
+| tags         | optional |    Array    |  A list of tags to associate with the recipe |
+
+## Customization
+
+### 404 Page
 
 #### `StyledParagraph`
 
