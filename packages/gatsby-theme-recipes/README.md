@@ -86,8 +86,6 @@ Run `npm start` to start the site.
 
 ### Theme Options
 
-It is recommended to use the Default options, but if your project requires something else you can configure them to your need.
-
 | Option                 |     Default     |                                                             Description                                                             |
 | ---------------------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
 | basePath           |  /  |                                          Root URL where your site will be served from. `/recipes` will change all paths to start with `/recipes`.                                         |
