@@ -1,41 +1,41 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Styled } from "theme-ui";
-import { graphql } from "gatsby";
+import { css, jsx } from "@emotion/core"
+import { Styled } from "theme-ui"
+import { graphql } from "gatsby"
 
-import RecipeCard from "../components/RecipeCard";
+import RecipeCard from "../components/RecipeCard"
 
 const createGridTemplate = length => {
   switch (length) {
     case 1:
       return `"i1 i1 i1"
               "i1 i1 i1"
-              "i1 i1 i1"`;
+              "i1 i1 i1"`
     case 2:
       return `"i1 i1 i2"
-              "i1 i1 i2"`;
+              "i1 i1 i2"`
     case 3:
       return `"i1 i1 i1"
               "i1 i1 i1"
               "i2 i3 i3"
-              "i2 i3 i3"`;
+              "i2 i3 i3"`
     case 4:
       return `"i1 i1 i2"
               "i1 i1 i2"
               "i3 i4 i4"
-              "i3 i4 i4"`;
+              "i3 i4 i4"`
     case 5:
       return `"i1 i2 i3"
               "i1 i2 i3"
               "i4 i2 i5"
-              "i4 i2 i5"`;
+              "i4 i2 i5"`
     case 6:
       return `"i1 i1 i2"
               "i1 i1 i2"
               "i3 i4 i4"
               "i3 i4 i4"
               "i5 i5 i6"
-              "i5 i5 i6"`;
+              "i5 i5 i6"`
     case 7:
       return `"i1 i1 i2"
               "i1 i1 i2"
@@ -44,7 +44,7 @@ const createGridTemplate = length => {
               "i5 i5 i6"
               "i5 i5 i6"
               "i7 i7 i7"
-              "i7 i7 i7"`;
+              "i7 i7 i7"`
     case 8:
       return `"i1 i1 i2"
               "i1 i1 i2"
@@ -53,7 +53,7 @@ const createGridTemplate = length => {
               "i5 i5 i6"
               "i5 i5 i6"
               "i7 i8 i8"
-              "i7 i8 i8"`;
+              "i7 i8 i8"`
     case 9:
       return `"i1 i1 i2"
               "i1 i1 i2"
@@ -64,7 +64,7 @@ const createGridTemplate = length => {
               "i7 i8 i8"
               "i7 i8 i8"
               "i9 i9 i9"
-              "i9 i9 i9"`;
+              "i9 i9 i9"`
     case 10:
       return `"i1 i2 i3"
               "i1 i2 i3"
@@ -73,7 +73,7 @@ const createGridTemplate = length => {
               "i6 i7 i8"
               "i6 i7 i8"
               "i9 i7 i10"
-              "i9 i7 i10"`;
+              "i9 i7 i10"`
     case 11:
       return `"i1 i2 i3"
               "i1 i2 i3"
@@ -84,7 +84,7 @@ const createGridTemplate = length => {
               "i9 i7 i10"
               "i9 i7 i10"
               "i9 i11 i11"
-              "i9 i11 i11"`;
+              "i9 i11 i11"`
     default:
       return `"i1 i1 i2"
               "i1 i1 i2"
@@ -97,9 +97,9 @@ const createGridTemplate = length => {
               "i9 i9 i10"
               "i9 i9 i10"
               "i11 i12 i12"
-              "i11 i12 i12"`;
+              "i11 i12 i12"`
   }
-};
+}
 
 const gridParentCSS = length => css`
   padding-top: 200px;
@@ -121,14 +121,14 @@ const gridParentCSS = length => css`
     grid-template-areas: ${createGridTemplate(length)};
     grid-auto-rows: 160px;
   }
-`;
+`
 
 const gridItem = name =>
   css`
     @media (min-width: 768px) {
       grid-area: ${name};
     }
-  `;
+  `
 
 const RecipeGrid = ({ recipes = [] }) => {
   return (
@@ -141,13 +141,13 @@ const RecipeGrid = ({ recipes = [] }) => {
               recipe={{ title, slug, image }}
               css={gridItem(`i${index + 1}`)}
             />
-          );
+          )
         })}
     </Styled.div>
-  );
-};
+  )
+}
 
-export default RecipeGrid;
+export default RecipeGrid
 
 export const query = graphql`
   fragment IndexRecipeFragment on Mdx {
@@ -163,4 +163,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

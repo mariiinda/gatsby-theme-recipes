@@ -33,11 +33,11 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "@marinda/gatsby-theme-recipes",
+      resolve: "@westegg/gatsby-theme-recipes",
       options: {
         title: "Classic Recipes",
         shortTitle: "Recipes"
       }
     }
   ]
-};
+}

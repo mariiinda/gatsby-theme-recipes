@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import StyledLink from "./StyledLink";
+import { css, jsx } from "@emotion/core"
+import StyledLink from "./StyledLink"
 
 const PageLink = ({ children, ...props }) => {
   return (
@@ -18,7 +18,7 @@ const PageLink = ({ children, ...props }) => {
     >
       {children}
     </StyledLink>
-  );
-};
+  )
+}
 
-export default PageLink;
+export default PageLink

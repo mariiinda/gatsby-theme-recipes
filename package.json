@@ -1,17 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "develop-theme": "yarn workspace @westegg/gatsby-theme-recipes develop",
-    "clean-theme": "yarn workspace @westegg/gatsby-theme-recipes clean",
     "build-theme": "yarn workspace @westegg/gatsby-theme-recipes build",
     "lint-theme": "yarn workspace @westegg/gatsby-theme-recipes lint",
     "start": "yarn workspace demo develop",
     "clean-demo": "yarn workspace demo clean",
-    "build": "yarn workspace demo build",
+    "build-demo": "yarn workspace demo build",
     "serve-demo": "yarn workspace demo serve",
     "lint-demo": "yarn workspace demo lint",
     "serve": "yarn workspace demo build && yarn workspace demo serve",
-    "optimize-images": "yarn workspace @westegg/gatsby-theme-recipes optimize && yarn workspace demo optimize"
+    "optimize-images": "yarn workspace @westegg/gatsby-theme-recipes optimize && yarn workspace demo optimize",
+    "build": "yarn build-theme && yarn build-demo"
   },
   "workspaces": [
     "packages/*"

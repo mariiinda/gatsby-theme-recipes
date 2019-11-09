@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { css, jsx } from "@emotion/core"
 
 const componentStyles = ({ theme: { space = [] }, position }) => css`
   float: none;
@@ -20,14 +20,14 @@ const componentStyles = ({ theme: { space = [] }, position }) => css`
       float: ${position};
     }
   }
-`;
+`
 
 const PageImage = ({ src = "", alt = "", position = "none", ...props }) => {
   return (
     <div css={theme => componentStyles({ theme, position })} {...props}>
       <img alt={alt} src={src} />
     </div>
-  );
-};
+  )
+}
 
-export default PageImage;
+export default PageImage

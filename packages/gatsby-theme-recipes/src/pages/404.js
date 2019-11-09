@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Styled } from "theme-ui";
+import { css, jsx } from "@emotion/core"
+import { Styled } from "theme-ui"
 
-import PageLayout from "../components/PageLayout";
-import BackLink from "../components/BackLink";
-import useSiteMetadata from "../hooks/use-sitemetadata";
+import PageLayout from "../components/PageLayout"
+import BackLink from "../components/BackLink"
+import useSiteMetadata from "../hooks/use-sitemetadata"
 
 const NotFoundPage = () => {
-  const { basePath } = useSiteMetadata();
+  const { basePath } = useSiteMetadata()
   return (
     <PageLayout>
       <Styled.h1
@@ -28,7 +28,7 @@ const NotFoundPage = () => {
         <BackLink path={basePath}>Back to recipes</BackLink>
       </Styled.p>
     </PageLayout>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

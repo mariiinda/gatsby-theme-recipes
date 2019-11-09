@@ -9,9 +9,7 @@
   "main": "index.js",
   "license": "SEE LICENSE IN https://github.com/westegg/gatsby-theme-recipes",
   "scripts": {
-    "build": "gatsby build",
-    "clean": "gatsby clean",
-    "develop": "gatsby develop",
+    "build": "npm run lint && echo 'no build'",
     "lint": "prettier --write --config package.json \".{/notes/**/,/pages/**/,/posts/**/,/projects/**/,/src/**/,/}*.{md,mdx,css,sass,less,json,js,jsx,ts,tsx}\"",
     "optimize": "node scripts/optimize.js"
   },

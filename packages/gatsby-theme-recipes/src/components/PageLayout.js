@@ -1,5 +1,5 @@
-import React from "react";
-import { Global } from "@emotion/core";
+import React from "react"
+import { Global } from "@emotion/core"
 import {
   Layout as StyledLayout,
   Header,
@@ -9,12 +9,12 @@ import {
   Styled,
   ThemeProvider,
   ColorMode
-} from "theme-ui";
-import { Link } from "gatsby";
+} from "theme-ui"
+import { Link } from "gatsby"
 
-import MenuLinks from "./MenuLinks";
-import FooterLinks from "./FooterLinks";
-import useSiteMetadata from "../hooks/use-sitemetadata";
+import MenuLinks from "./MenuLinks"
+import FooterLinks from "./FooterLinks"
+import useSiteMetadata from "../hooks/use-sitemetadata"
 
 const PageLayout = ({ children }) => {
   const {
@@ -22,7 +22,7 @@ const PageLayout = ({ children }) => {
     menuLinks = [],
     footerLinks = [],
     basePath
-  } = useSiteMetadata();
+  } = useSiteMetadata()
 
   return (
     <Styled.root>
@@ -54,7 +54,7 @@ const PageLayout = ({ children }) => {
         </Container>
       </StyledLayout>
     </Styled.root>
-  );
-};
+  )
+}
 
-export default PageLayout;
+export default PageLayout

@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import Img from "gatsby-image";
-import { motion, AnimatePresence } from "framer-motion";
+import { css, jsx } from "@emotion/core"
+import Img from "gatsby-image"
+import { motion, AnimatePresence } from "framer-motion"
 
 const componentStyles = css`
   float: right;
@@ -20,11 +20,11 @@ const componentStyles = css`
       padding-bottom: 100% !important;
     }
   }
-`;
+`
 
 const CoverImage = ({ image, alt = "", ...props }) => {
-  const duration = 3;
-  const delay = 0.2;
+  const duration = 3
+  const delay = 0.2
 
   const variants = {
     initial: {
@@ -43,7 +43,7 @@ const CoverImage = ({ image, alt = "", ...props }) => {
       transform: "scale(1.1)",
       transition: { duration }
     }
-  };
+  }
   return (
     <AnimatePresence>
       <div css={componentStyles}>
@@ -58,7 +58,7 @@ const CoverImage = ({ image, alt = "", ...props }) => {
         </motion.div>
       </div>
     </AnimatePresence>
-  );
-};
+  )
+}
 
-export default CoverImage;
+export default CoverImage

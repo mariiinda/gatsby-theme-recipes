@@ -1,19 +1,19 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
-import { Fragment } from "react";
-import { Styled, useColorMode } from "theme-ui";
-import { Button } from "@marinda/react-styled-buttons";
+import { jsx } from "@emotion/core"
+import { Fragment } from "react"
+import { Styled, useColorMode } from "theme-ui"
+import { Button } from "@marinda/react-styled-buttons"
 
-import StyledLink, { linkStyle } from "./StyledLink";
+import StyledLink, { linkStyle } from "./StyledLink"
 
 const FooterLinks = ({ items }) => {
-  const [colorMode, setColorMode] = useColorMode();
+  const [colorMode, setColorMode] = useColorMode()
   return (
     <nav>
       {items &&
         items.length > 0 &&
         items.map(({ name, href }) => {
-          const isExternal = /^http/.test(href);
+          const isExternal = /^http/.test(href)
           return (
             <Fragment key={href}>
               {isExternal && (
@@ -28,7 +28,7 @@ const FooterLinks = ({ items }) => {
               )}
               {!isExternal && <StyledLink to={href}>{name}</StyledLink>}
             </Fragment>
-          );
+          )
         })}
 
       <Button
@@ -37,13 +37,13 @@ const FooterLinks = ({ items }) => {
         variant="primary"
         className="color-mode-btn"
         onClick={() => {
-          setColorMode(colorMode === "default" ? "dark" : "default");
+          setColorMode(colorMode === "default" ? "dark" : "default")
         }}
       >
         {colorMode === "default" ? "Dark" : "Light"} Theme
       </Button>
     </nav>
-  );
-};
+  )
+}
 
-export default FooterLinks;
+export default FooterLinks

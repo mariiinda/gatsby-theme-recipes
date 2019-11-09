@@ -1,13 +1,13 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from "react"
+import { graphql } from "gatsby"
 
-import SEO from "../components/SEO";
-import PageLayout from "../components/PageLayout";
-import RecipeGrid from "../components/RecipeGrid";
-import useSiteMetadata from "../hooks/use-sitemetadata";
-import Tags from "../components/Tags";
-import PageIntro from "../components/PageIntro";
-import Pagination from "../components/Pagination";
+import SEO from "../components/SEO"
+import PageLayout from "../components/PageLayout"
+import RecipeGrid from "../components/RecipeGrid"
+import useSiteMetadata from "../hooks/use-sitemetadata"
+import Tags from "../components/Tags"
+import PageIntro from "../components/PageIntro"
+import Pagination from "../components/Pagination"
 
 export const query = graphql`
   query($tag: String!, $skip: Int!, $limit: Int!) {
@@ -28,7 +28,7 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
 const RecipesTemplate = ({
   data: {
@@ -37,7 +37,7 @@ const RecipesTemplate = ({
   },
   pageContext: { currentPage, numPages, tag }
 }) => {
-  const { intro, title, image, basePath } = useSiteMetadata();
+  const { intro, title, image, basePath } = useSiteMetadata()
   return (
     <>
       <SEO title={title} image={image} />
@@ -52,7 +52,7 @@ const RecipesTemplate = ({
         />
       </PageLayout>
     </>
-  );
-};
+  )
+}
 
-export default RecipesTemplate;
+export default RecipesTemplate

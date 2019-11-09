@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Styled } from "theme-ui";
-import { Link } from "gatsby";
-import Img from "gatsby-image";
+import { css, jsx } from "@emotion/core"
+import { Styled } from "theme-ui"
+import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 const componentStyles = ({
   colors: { background, grey, primary, text },
@@ -34,7 +34,7 @@ const componentStyles = ({
         transform: scale(1.1);
       }
     }
-  `;
+  `
 
 const imageWrapperStyles = css`
   flex: 0 1 80%;
@@ -52,7 +52,7 @@ const imageWrapperStyles = css`
       transform-origin: center;
     }
   }
-`;
+`
 
 const titleWrapperStyles = ({ fontSizes, sizes }) => css`
   text-transform: capitalize;
@@ -70,7 +70,7 @@ const titleWrapperStyles = ({ fontSizes, sizes }) => css`
   @media (min-width: ${sizes.lg}px) {
     font-size: ${fontSizes[3]};
   }
-`;
+`
 
 const RecipeCard = ({ recipe: { title, slug, image }, ...props }) => {
   return (
@@ -85,7 +85,7 @@ const RecipeCard = ({ recipe: { title, slug, image }, ...props }) => {
       </div>
       <div css={theme => titleWrapperStyles(theme)}>{title}</div>
     </Styled.a>
-  );
-};
+  )
+}
 
-export default RecipeCard;
+export default RecipeCard

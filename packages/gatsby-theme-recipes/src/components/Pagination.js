@@ -1,21 +1,21 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Fragment } from "react";
-import { Link } from "gatsby";
-import { Button } from "@marinda/react-styled-buttons";
+import { css, jsx } from "@emotion/core"
+import { Fragment } from "react"
+import { Link } from "gatsby"
+import { Button } from "@marinda/react-styled-buttons"
 
-import StyledLink from "../components/StyledLink";
+import StyledLink from "../components/StyledLink"
 
 const componentCSS = theme => css`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: ${theme.space[5]}px 0 ${theme.space[2]}px;
-`;
+`
 
 const ulCSS = css`
   padding: 0;
-`;
+`
 
 const linkCSS = theme => css`
   position: relative;
@@ -38,7 +38,7 @@ const linkCSS = theme => css`
       display: none;
     }
   }
-`;
+`
 
 const buttonCSS = theme => css`
   text-decoration: none;
@@ -61,16 +61,16 @@ const buttonCSS = theme => css`
     box-shadow: 0 0px 8px ${theme.colors.primary},
       0 0px 8px ${theme.colors.primary};
   }
-`;
+`
 
 const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
-  const isFirst = currentPage === 1;
-  const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString();
-  const prevPagePath = `${basePath}${prevPage}`;
-  const nextPage = (currentPage + 1).toString();
-  const nextPagePath = `${basePath}${nextPage}`;
-  const isOnePage = isFirst && isLast;
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
+  const prevPagePath = `${basePath}${prevPage}`
+  const nextPage = (currentPage + 1).toString()
+  const nextPagePath = `${basePath}${nextPage}`
+  const isOnePage = isFirst && isLast
 
   return (
     <Fragment>
@@ -115,6 +115,6 @@ const Pagination = ({ currentPage, numPages, basePath = "/" }) => {
         </nav>
       )}
     </Fragment>
-  );
-};
-export default Pagination;
+  )
+}
+export default Pagination

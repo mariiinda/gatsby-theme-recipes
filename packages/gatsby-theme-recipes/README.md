@@ -53,6 +53,7 @@ The following is the recommended folder structure:
     ├── gatsby-config.js
     └── package.json
 ```
+
 Create a folder 'posts' and add at least one recipe inside.
 Its recommended to have a folder for each recipe, with a .mdx file for your recipe content and an image inside an images folder.
 
@@ -80,11 +81,11 @@ Add `@marinda/gatsby-theme-recipes` as a plugin in `gatsby-config.js`.
     ```
 
 1. Add following to your package.json scripts
-    ```json
-     "start": "gatsby develop",
-     "clean": "gatsby clean",
-     "build": "gatsby build",
-    ```
+   ```json
+    "start": "gatsby develop",
+    "clean": "gatsby clean",
+    "build": "gatsby build",
+   ```
 
 Run `npm start` to start the site.
 
@@ -92,21 +93,22 @@ Run `npm start` to start the site.
 
 ### Theme Options
 
-| Option                 |     Default     |                                                             Description                                                             |
-| ---------------------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
-| basePath           |  /  |                                          Root URL where your site will be served from. `/recipes` will change all paths to start with `/recipes`.                                         |
-| contentPath         | posts |                                         Location of recipe content files.                                         |
-| title           |      Delicious Recipes      |                                                         Your site title, used for the site title, SEO and mobile home screen.                                                         |
-| shortTitle            |    Recipes     |                                                   A short title for your site, used for mobile home screen.                                                   |
-| iconPath               |        default icon        |                      Path to the icon to be used for the favicon and web manifest. For example `'src/images/favicon.png'`. For best results provide a 512x512 square.                      |
+| Option      | Default           | Description                                                                                                                                      |
+| ----------- | :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| basePath    | /                 | Root URL where your site will be served from. `/recipes` will change all paths to start with `/recipes`.                                         |
+| contentPath | posts             | Location of recipe content files.                                                                                                                |
+| title       | Delicious Recipes | Your site title, used for the site title, SEO and mobile home screen.                                                                            |
+| shortTitle  | Recipes           | A short title for your site, used for mobile home screen.                                                                                        |
+| iconPath    | default icon      | Path to the icon to be used for the favicon and web manifest. For example `'src/images/favicon.png'`. For best results provide a 512x512 square. |
 
 #### Example usage
 
 Recommended example usage
+
 ```js
 // gatsby-config.js
 module.exports = {
-   plugins: [
+  plugins: [
     {
       resolve: "@marinda/gatsby-theme-recipes",
       options: {
@@ -119,7 +121,7 @@ module.exports = {
       }
     }
   ]
-};
+}
 ```
 
 ### Additional Configuration
@@ -131,47 +133,49 @@ In addition to the theme options, there are a handful of items you can customize
 module.exports = {
   siteMetadata: {
     // Used for SEO
-    description: 'My site description...',
+    description: "My site description...",
     // Used for SEO. Do not include a trailing slash
-    url: 'https://www.example.com',
+    url: "https://www.example.com",
     // Site image used for social sharing, image should live in the 'static' folder
     image: "/images/og-image.jpg",
     // Used for SEO
-    author: 'J Hollyhock',
+    author: "J Hollyhock",
     // Used for an optional intro section at the top of the recipes template
-    intro: 'Classic recipes you’ll want to keep making.',
+    intro: "Classic recipes you’ll want to keep making.",
     // Used for the top navigation links
     menuLinks: [
       {
-        name: 'About',
-        slug: '/about/',
+        name: "About",
+        slug: "/about/"
       }
     ],
     // Used for the links in the footer
     footerLinks: [
       {
-        name: 'Instagram',
-        href: 'https://www.instagram.com/recipes',
-      },
-    ],
-  },
+        name: "Instagram",
+        href: "https://www.instagram.com/recipes"
+      }
+    ]
+  }
 }
 ```
 
 ## Writing a recipe
+
 [View recipe example](https://github.com/mariiinda/gatsby-theme-recipes/blob/master/packages/demo/posts/chocolate-chip-cookies/chocolate-chip-cookies.mdx)
 
-| Key          | Required |    Type    |                                          Description                                          |
-| ------------ | :------: | :-------- | :------------------------------------------------------------------------------------------- |
-| title        | optional |   String   |  Recipe title.                  |
-| slug         | required |   String   |  Define a custom slug that will.                |
-| date         | optional |    Date    |  YYYY-MM-DD format                                       |
-| image         | required |    String    |  Image to be used as preview on recipe listings |
-| tags         | optional |    Array    |  A list of tags to associate with the recipe |
+| Key   | Required | Type   | Description                                    |
+| ----- | :------: | :----- | :--------------------------------------------- |
+| title | optional | String | Recipe title.                                  |
+| slug  | required | String | Define a custom slug that will.                |
+| date  | optional | Date   | YYYY-MM-DD format                              |
+| image | required | String | Image to be used as preview on recipe listings |
+| tags  | optional | Array  | A list of tags to associate with the recipe    |
 
 ## Customization
 
 ### Changing styles
+
 Change the default theme styling by updating the [theme-ui](https://theme-ui.com/gatsby-plugin) properties.
 
 First, you must create a theme file and then you can override `theme` properties.
@@ -180,7 +184,7 @@ First, you must create a theme file and then you can override `theme` properties
 ```js
 // src/gatsby-plugin-theme-ui/index.js
 
-import theme from '@marinda/gatsby-theme-recipes/src/gatsby-plugin-theme-ui';
+import theme from "@marinda/gatsby-theme-recipes/src/gatsby-plugin-theme-ui"
 
 export default {
   ...theme,
@@ -198,7 +202,7 @@ export default {
       }
     }
   }
-};
+}
 ```
 
 ### Pages
@@ -206,6 +210,7 @@ export default {
 Content pages live in the 'src/pages' folder. You can add .mdx files in this folder. [View the demo site's about and privacy policy pages](https://github.com/mariiinda/gatsby-theme-recipes/tree/master/packages/demo/src/pages).
 
 ### Markdown components:
+
 The following components available in .mdx files that live in 'posts' and 'src/pages'.
 
 #### `Image`
@@ -227,7 +232,10 @@ Introduction text that captures your reader's attention. It has a larger font si
 In any MDX file:
 
 ```mdx
-<StyledParagraph>These delicious choc-chip cookies are crispy on the outside and chewy on the inside.</StyledParagraph>
+<StyledParagraph>
+  These delicious choc-chip cookies are crispy on the outside and chewy on the
+  inside.
+</StyledParagraph>
 ```
 
 #### Example usage in React components
@@ -235,14 +243,17 @@ In any MDX file:
 In any React component:
 
 ```jsx
-import React from 'react';
-import { StyledParagraph } from '@marinda/gatsby-theme-recipes';
+import React from "react"
+import { StyledParagraph } from "@marinda/gatsby-theme-recipes"
 
 export default () => (
   <div>
-    <StyledParagraph>These delicious choc-chip cookies are crispy on the outside and chewy on the inside.</StyledParagraph>
+    <StyledParagraph>
+      These delicious choc-chip cookies are crispy on the outside and chewy on
+      the inside.
+    </StyledParagraph>
   </div>
-);
+)
 ```
 
 #### How to shadow a component

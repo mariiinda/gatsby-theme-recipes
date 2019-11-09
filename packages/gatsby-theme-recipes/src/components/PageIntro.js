@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Styled } from "theme-ui";
+import { css, jsx } from "@emotion/core"
+import { Styled } from "theme-ui"
 
 const PageIntro = ({ children }) => {
   return (
@@ -16,7 +16,7 @@ const PageIntro = ({ children }) => {
     >
       {children}
     </Styled.p>
-  );
-};
+  )
+}
 
-export default PageIntro;
+export default PageIntro

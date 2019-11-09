@@ -1,4 +1,4 @@
-import theme from "@marinda/gatsby-theme-recipes/src/gatsby-plugin-theme-ui";
+import theme from "@westegg/gatsby-theme-recipes/src/gatsby-plugin-theme-ui"
 
 export default {
   ...theme,
@@ -12,4 +12,4 @@ export default {
       }
     }
   }
-};
+}

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import { jsx, Styled } from "theme-ui"
 
 const StyledParagraph = props => (
   <Styled.p
@@ -10,5 +10,5 @@ const StyledParagraph = props => (
     }}
     {...props}
   />
-);
-export default StyledParagraph;
+)
+export default StyledParagraph

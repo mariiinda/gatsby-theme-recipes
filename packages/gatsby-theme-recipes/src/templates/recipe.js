@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
-import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { jsx, Styled } from "theme-ui"
+import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import SEO from "../components/SEO";
-import MarkdownLayout from "../components/MarkdownLayout";
-import CoverImage from "../components/CoverImage";
-import PageTransition from "../components/PageTransition";
+import SEO from "../components/SEO"
+import MarkdownLayout from "../components/MarkdownLayout"
+import CoverImage from "../components/CoverImage"
+import PageTransition from "../components/PageTransition"
 
 export const query = graphql`
   query($slug: String!) {
@@ -25,7 +25,7 @@ export const query = graphql`
       body
     }
   }
-`;
+`
 
 const RecipeTemplate = ({
   data: {
@@ -47,7 +47,7 @@ const RecipeTemplate = ({
         </PageTransition>
       </MarkdownLayout>
     </article>
-  );
-};
+  )
+}
 
-export default RecipeTemplate;
+export default RecipeTemplate

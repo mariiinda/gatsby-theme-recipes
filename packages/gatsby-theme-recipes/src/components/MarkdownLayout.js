@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
-import { MDXProvider } from "@mdx-js/react";
+import { jsx, Styled } from "theme-ui"
+import { MDXProvider } from "@mdx-js/react"
 
-import PageLayout from "../components/PageLayout";
-import BackLink from "../components/BackLink";
-import StyledParagraph from "./StyledParagraph";
-import ListItem from "./ListItem";
-import useSiteMetadata from "../hooks/use-sitemetadata";
-import PageLink from "./PageLink";
+import PageLayout from "../components/PageLayout"
+import BackLink from "../components/BackLink"
+import StyledParagraph from "./StyledParagraph"
+import ListItem from "./ListItem"
+import useSiteMetadata from "../hooks/use-sitemetadata"
+import PageLink from "./PageLink"
 
 const components = {
   h1: Styled.h1,
@@ -23,10 +23,10 @@ const components = {
   StyledParagraph,
   ListItem,
   a: PageLink
-};
+}
 
 const MarkdownLayout = ({ children }) => {
-  const { basePath } = useSiteMetadata();
+  const { basePath } = useSiteMetadata()
   return (
     <MDXProvider components={components}>
       <PageLayout>
@@ -34,7 +34,7 @@ const MarkdownLayout = ({ children }) => {
         <div sx={{ variant: "markdownWrappers.recipes" }}>{children}</div>
       </PageLayout>
     </MDXProvider>
-  );
-};
+  )
+}
 
-export default MarkdownLayout;
+export default MarkdownLayout

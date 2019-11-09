@@ -1,9 +1,9 @@
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 const Transition = ({ children, key = "" }) => {
-  const duration = 0.75;
-  const delay = 0.2;
+  const duration = 0.75
+  const delay = 0.2
 
   const variants = {
     initial: {
@@ -21,7 +21,7 @@ const Transition = ({ children, key = "" }) => {
       opacity: 0,
       transition: { duration }
     }
-  };
+  }
 
   return (
     <AnimatePresence>
@@ -35,7 +35,7 @@ const Transition = ({ children, key = "" }) => {
         {children}
       </motion.div>
     </AnimatePresence>
-  );
-};
+  )
+}
 
-export default Transition;
+export default Transition

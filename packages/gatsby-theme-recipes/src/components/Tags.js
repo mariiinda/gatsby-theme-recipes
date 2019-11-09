@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Link } from "gatsby";
-import { Button } from "@marinda/react-styled-buttons";
+import { css, jsx } from "@emotion/core"
+import { Link } from "gatsby"
+import { Button } from "@marinda/react-styled-buttons"
 
 const componentCSS = css`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-`;
+`
 
 const buttonCSS = theme => css`
   text-decoration: none;
@@ -32,7 +32,7 @@ const buttonCSS = theme => css`
     box-shadow: 0 0px 8px ${theme.colors.primary},
       0 0px 8px ${theme.colors.primary};
   }
-`;
+`
 
 const Tags = ({ basePath = "/", tags = [] }) => {
   return (
@@ -64,7 +64,7 @@ const Tags = ({ basePath = "/", tags = [] }) => {
           </Button>
         ))}
     </nav>
-  );
-};
+  )
+}
 
-export default Tags;
+export default Tags

@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby"
 
 const useRecipes = () => {
   const data = useStaticQuery(graphql`
@@ -15,8 +15,8 @@ const useRecipes = () => {
         }
       }
     }
-  `);
-  return { recipes: data.allMdx.nodes, tags: data.tags.group };
-};
+  `)
+  return { recipes: data.allMdx.nodes, tags: data.tags.group }
+}
 
-export default useRecipes;
+export default useRecipes

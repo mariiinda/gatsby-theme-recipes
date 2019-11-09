@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { css, jsx } from "@emotion/core"
 
-import StyledLink from "../components/StyledLink";
+import StyledLink from "../components/StyledLink"
 
 const BackLink = ({ path = "/", children }) => {
   return (
@@ -14,7 +14,7 @@ const BackLink = ({ path = "/", children }) => {
     >
       <span aria-hidden>{"<"} </span> <span>{children}</span>
     </StyledLink>
-  );
-};
+  )
+}
 
-export default BackLink;
+export default BackLink

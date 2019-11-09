@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx } from "theme-ui"
 
 const ListItem = ({ children }) => (
   <span
@@ -10,5 +10,5 @@ const ListItem = ({ children }) => (
   >
     {children}
   </span>
-);
-export default ListItem;
+)
+export default ListItem

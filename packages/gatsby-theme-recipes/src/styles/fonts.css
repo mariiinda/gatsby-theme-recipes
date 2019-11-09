@@ -6,31 +6,31 @@ body {
 @font-face {
   font-family: "Cardo";
   src: url("../fonts/Cardo-Regular.woff2"),
-  url('../fonts/Cardo-Regular.woff') format('woff');
+    url("../fonts/Cardo-Regular.woff") format("woff");
   font-weight: normal;
-  font-style: normal
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Raleway";
-  src: url('../fonts/Raleway-Medium.woff2') format('woff2'),
-        url('../fonts/Raleway-Medium.woff') format('woff');
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2"),
+    url("../fonts/Raleway-Medium.woff") format("woff");
   font-weight: normal;
-  font-style: normal
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Raleway";
-  src: url('../fonts/Raleway-MediumItalic.woff2') format('woff2'),
-        url('../fonts/Raleway-MediumItalic.woff') format('woff');
+  src: url("../fonts/Raleway-MediumItalic.woff2") format("woff2"),
+    url("../fonts/Raleway-MediumItalic.woff") format("woff");
   font-weight: normal;
-  font-style: italic
+  font-style: italic;
 }
 
 @font-face {
   font-family: "Raleway";
-  src: url('../fonts/Raleway-SemiBold.woff2') format('woff2'),
-        url('../fonts/Raleway-SemiBold.woff') format('woff');
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"),
+    url("../fonts/Raleway-SemiBold.woff") format("woff");
   font-weight: bold;
-  font-style: normal
+  font-style: normal;
 }

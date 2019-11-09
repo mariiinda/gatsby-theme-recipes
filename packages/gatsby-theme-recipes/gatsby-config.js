@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require("path")
 
 module.exports = ({
   basePath = "/",
@@ -93,5 +93,5 @@ module.exports = ({
       "gatsby-plugin-react-helmet",
       "gatsby-plugin-emotion"
     ]
-  };
-};
+  }
+}

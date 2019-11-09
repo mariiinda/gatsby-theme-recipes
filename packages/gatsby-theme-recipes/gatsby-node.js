@@ -1,12 +1,12 @@
-const fs = require("fs");
+const fs = require("fs")
 
 // Make sure the recipes directory exists
 exports.onPreBootstrap = ({ reporter }, { contentPath = "posts" }) => {
   if (!fs.existsSync(contentPath)) {
-    reporter.info(`creating the ${contentPath} directory`);
-    fs.mkdirSync(contentPath);
+    reporter.info(`creating the ${contentPath} directory`)
+    fs.mkdirSync(contentPath)
   }
-};
+}
 
 exports.createPages = async (
   { actions: { createPage }, graphql, reporter },
@@ -23,16 +23,16 @@ exports.createPages = async (
         }
       }
     }
-  `);
+  `)
 
   if (result.errors) {
-    reporter.panic("failed to create recipes", result.errors);
+    reporter.panic("failed to create recipes", result.errors)
   }
 
-  const recipes = result.data.allMdx.nodes;
+  const recipes = result.data.allMdx.nodes
 
-  const recipesPerPage = 12;
-  const numPages = Math.ceil(recipes.length / recipesPerPage);
+  const recipesPerPage = 12
+  const numPages = Math.ceil(recipes.length / recipesPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? basePath : `${basePath}${i + 1}`,
@@ -43,8 +43,8 @@ exports.createPages = async (
         numPages,
         currentPage: i + 1
       }
-    });
-  });
+    })
+  })
 
   recipes.forEach(recipe => {
     createPage({
@@ -53,8 +53,8 @@ exports.createPages = async (
       context: {
         slug: recipe.frontmatter.slug
       }
-    });
-  });
+    })
+  })
 
   // tags pages
   const tagsResult = await graphql(`
@@ -66,16 +66,16 @@ exports.createPages = async (
         }
       }
     }
-  `);
+  `)
 
   if (tagsResult.errors) {
-    reporter.panic("failed to create tags", tagsResult.errors);
+    reporter.panic("failed to create tags", tagsResult.errors)
   }
 
-  const tags = tagsResult.data.allMdx.group;
+  const tags = tagsResult.data.allMdx.group
 
   tags.forEach(tag => {
-    const numPages = Math.ceil(tag.totalCount / recipesPerPage);
+    const numPages = Math.ceil(tag.totalCount / recipesPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path:
@@ -90,7 +90,7 @@ exports.createPages = async (
           numPages,
           currentPage: i + 1
         }
-      });
-    });
-  });
-};
+      })
+    })
+  })
+}

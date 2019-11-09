@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { Link } from "gatsby";
+import { css, jsx } from "@emotion/core"
+import { Link } from "gatsby"
 
 export const linkStyle = ({ theme, size }) => css`
   position: relative;
@@ -33,7 +33,7 @@ export const linkStyle = ({ theme, size }) => css`
   &:focus:before {
     width: 100%;
   }
-`;
+`
 
 const StyledLink = ({
   as: Element,
@@ -51,11 +51,11 @@ const StyledLink = ({
     >
       {children}
     </Element>
-  );
-};
+  )
+}
 
 StyledLink.defaultProps = {
   as: Link
-};
+}
 
-export default StyledLink;
+export default StyledLink

@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx } from "@emotion/core"
 
-import StyledLink from "./StyledLink";
+import StyledLink from "./StyledLink"
 
 const MenuLinks = ({ items }) => {
   return (
@@ -14,7 +14,7 @@ const MenuLinks = ({ items }) => {
           </StyledLink>
         ))}
     </nav>
-  );
-};
+  )
+}
 
-export default MenuLinks;
+export default MenuLinks
