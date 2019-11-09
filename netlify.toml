@@ -1,4 +1,0 @@
-[build]
-  base = "packages/demo"
-  command = "npm run clean && npm run build"
-  publish = "packages/demo/public"

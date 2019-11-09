@@ -2,35 +2,27 @@
   "private": true,
   "name": "demo",
   "version": "1.0.0",
-  "license": "MIT",
+  "license": "SEE LICENSE IN https://github.com/westegg/gatsby-theme-recipes",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "lint": "prettier --write --config package.json \".{/notes/**/,/pages/**/,/posts/**/,/projects/**/,/src/**/,/}*.{md,mdx,css,sass,less,json,js,jsx,ts,tsx}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "optimize": "node scripts/optimize.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "@marinda/gatsby-theme-recipes": "^*",
+    "@westegg/gatsby-theme-recipes": "*",
     "gatsby": "^2.15.28",
     "react": "^16.10.1",
     "react-dom": "^16.10.1"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.0",
-    "eslint-config-prettier": "^6.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^2.1.1",
+    "@misk/prettier": "0.1.23",
     "fs-extra": "^8.1.0",
-    "glob": "^7.1.4",
-    "prettier": "^1.18.2"
+    "glob": "^7.1.4"
   },
-  "prettier": {}
+  "prettier": "@misk/prettier"
 }
