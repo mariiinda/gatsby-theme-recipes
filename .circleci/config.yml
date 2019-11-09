@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.15
+    steps:
+      - checkout
+      - run:
+          name: Installing...
+          command: yarn install
+      - run:
+          name: Building theme...
+          command: yarn build-theme
+      - run:
+          name: Building demo...
+          command: yarn build
