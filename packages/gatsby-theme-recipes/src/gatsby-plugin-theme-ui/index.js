@@ -194,7 +194,7 @@ export default {
         variant: "text.heading"
       },
       ul: {
-        maxWidth: "500px",
+        maxWidth: "sm",
         px: 1,
         listStyle: "inside",
         p: {
