@@ -263,6 +263,72 @@ export default {
       "*::selection": {
         bg: "muted",
         color: "text"
+      },
+      header: {
+        position: "relative",
+        color: "text",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        mt: 2,
+        mb: 4,
+        pb: [3, 5],
+        borderBottom: "1px solid transparent",
+        borderColor: "muted",
+        h1: {
+          margin: 0,
+          mt: 4,
+          color: "text",
+          fontSize: [6, 7, 8],
+          lineHeight: "heading",
+          fontFamily: "heading",
+          fontWeight: "heading",
+          letterSpacing: "heading"
+        },
+        nav: {
+          alignSelf: "flex-end"
+        }
+      },
+      main: {
+        display: "flex",
+        flexDirection: "column"
+      },
+      footer: {
+        position: "relative",
+        color: "text",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        mt: 4,
+        mb: 2,
+        pt: [3, 4],
+        borderTop: "1px solid transparent",
+        borderColor: "muted",
+        nav: {
+          position: "relative",
+          a: {
+            position: "relative",
+            mr: 3,
+            display: "inline-block",
+            "&:after": {
+              position: "absolute",
+              top: 0,
+              right: "-10px",
+              content: "'|'",
+              display: ["none", "block"]
+            },
+            "&:last-of-type": {
+              "&:after": {
+                display: "none"
+              }
+            }
+          },
+          ".color-mode-btn": {
+            float: "right",
+            color: "text",
+            bg: "accent"
+          }
+        }
       }
     },
     a: {
@@ -276,86 +342,6 @@ export default {
     img: {
       width: "100%",
       height: "auto"
-    },
-    Layout: {
-      pt: 2,
-      borderWidth: ["10px", "32px"],
-      borderStyle: "solid",
-      borderColor: "muted",
-      display: "flex"
-    },
-    Header: {
-      position: "relative",
-      color: "text",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      mt: 2,
-      mb: 4,
-      pb: [3, 5],
-      borderBottom: "1px solid transparent",
-      borderColor: "muted",
-      h1: {
-        margin: 0,
-        mt: 4,
-        color: "text",
-        fontSize: [6, 7, 8],
-        lineHeight: "heading",
-        fontFamily: "heading",
-        fontWeight: "heading",
-        letterSpacing: "heading"
-      },
-      nav: {
-        alignSelf: "flex-end"
-      }
-    },
-    Container: {
-      maxWidth: "xl",
-      display: "flex",
-      flexDirection: "column",
-      flex: 1,
-      padding: [3, 4, 5]
-    },
-    Main: {
-      display: "flex",
-      flexDirection: "column"
-    },
-    Footer: {
-      position: "relative",
-      color: "text",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      mt: 4,
-      mb: 2,
-      pt: [3, 4],
-      borderTop: "1px solid transparent",
-      borderColor: "muted",
-      nav: {
-        position: "relative",
-        a: {
-          position: "relative",
-          mr: 3,
-          display: "inline-block",
-          "&:after": {
-            position: "absolute",
-            top: 0,
-            right: "-10px",
-            content: "'|'",
-            display: ["none", "block"]
-          },
-          "&:last-of-type": {
-            "&:after": {
-              display: "none"
-            }
-          }
-        },
-        ".color-mode-btn": {
-          float: "right",
-          color: "text",
-          bg: "accent"
-        }
-      }
     }
   }
 };
