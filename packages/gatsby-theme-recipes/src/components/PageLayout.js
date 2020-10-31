@@ -1,15 +1,6 @@
 import React from "react";
 import { Global } from "@emotion/core";
-import {
-  Layout as StyledLayout,
-  Header,
-  Footer,
-  Main,
-  Container,
-  Styled,
-  ThemeProvider,
-  ColorMode
-} from "theme-ui";
+import { Flex, Container, Styled } from "theme-ui";
 import { Link } from "gatsby";
 
 import MenuLinks from "./MenuLinks";
@@ -37,22 +28,43 @@ const PageLayout = ({ children }) => {
           }
         }}
       />
-      <StyledLayout>
-        <Container>
-          <Header>
+      <Flex
+        sx={{
+          pt: 2,
+          borderWidth: ["10px", "32px"],
+          borderStyle: "solid",
+          borderColor: "muted",
+          display: "flex",
+          boxSizing: "border-box",
+          minWidth: "0px",
+          minHeight: "100vh",
+          flexDirection: "column",
+          paddingTop: "8px"
+        }}
+      >
+        <Container
+          sx={{
+            maxWidth: "xl",
+            display: "flex",
+            flexDirection: "column",
+            flex: 1,
+            padding: [3, 4, 5]
+          }}
+        >
+          <header>
             <MenuLinks items={menuLinks} />
             <Styled.h1>
               <Styled.a as={Link} to={basePath}>
                 {title}
               </Styled.a>
             </Styled.h1>
-          </Header>
-          <Main>{children}</Main>
-          <Footer>
+          </header>
+          <main>{children}</main>
+          <footer>
             <FooterLinks items={footerLinks} />
-          </Footer>
+          </footer>
         </Container>
-      </StyledLayout>
+      </Flex>
     </Styled.root>
   );
 };
